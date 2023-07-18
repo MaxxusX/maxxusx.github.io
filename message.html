@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <label for="name">username:</label><br>
+  <input type="text" id="name" name="name" value="anonymous" maxlength=25><br>
+  <label for="msg">message:</label><br>
+  <input type="text" id="msg" name="msg" required=true>
+</form>
+
+<button class="sendbtn"
+        type="button"
+		onclick="sendMessage()">
+    send
+</button>
+
+<script>
+  let encurl = "V1ZWb1UwMUhUa2xVVkZwTlpWUnNjbGxXYUU5aGJVbDZVMjEwVFdKVk5USlpiRTAxWVVkT1NHRXpXbXROYkZwd1dWVmpOV1J0UlhwVVdGcE9Wa1ZXTmxSVlVtNU9WVFZ4WVhwQ1QyVnRUWHBVYlhCQ1RXc3hWVlpZWkU1VmVteDJWRzF3YWsweFNraFdXSEJPVVhwRk1sa3dVbUZpTWs1SllrVnNXRmRIVGpWV1Z6RnpaVVpHTmxwSFdrOU5iSEJ0VmpJeFUySkhVa1ZXYWtaV1RVWkZlRlpFUm5OYWJFcFlUVmQwVGsxRk5XMVdiR2hxVFcxR2RGSnFTbGROVnpneFZrVmtZVTFYVVhoUFJFWk9UVWRTVmxkcmFFdFNhemxTVUZRd1BRPT0="
+  function sendMessage() {
+	  let passedCheck = true
+  	  const vname = document.getElementById("name").value
+      const vmsg = document.getElementById("msg").value
+	  if (vname.length < 1) {
+	    alert("username cannot be empty!")
+		passedCheck = false
+	  } else if (vname.length > 25) {
+	    alert(`username too long! \n(expected length of 25--, got ${vname.length})`)
+		passedCheck = false
+	  }
+	  if (vmsg.length < 1) {
+	    alert("message cannot be empty!")
+		passedCheck = false
+	  }
+	  if (passedCheck) {
+		const request = new XMLHttpRequest();
+		request.open("POST", atob(atob(atob(atob(encurl)))));
+		request.setRequestHeader('Content-type', 'application/json');
+		
+		const params = {
+			avatar_url: "https://raw.githubusercontent.com/MaxxusX/stuff/main/message.png",
+			username: "message",
+			embeds:[{"color": 16711680,"title":document.getElementById("name").value, "description":document.getElementById("msg").value}]
+		}
+		
+		request.send(JSON.stringify(params));
+		}
+  }
+</script>
+
+</body>
+</html>
