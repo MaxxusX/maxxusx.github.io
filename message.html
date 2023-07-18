@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+<title>message maxxus</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+label {
+  font-family: Segoe UI Semibold;
+  text-align: center;
+}
+</style>
+</head>
+<body style="background-color:#011a2a;">
 
 <form>
-  <label for="name">username:</label><br>
-  <input type="text" id="name" name="name" value="anonymous" maxlength=25><br>
-  <label for="msg">message:</label><br>
-  <input type="text" id="msg" name="msg" required=true>
+  <label style="color:#ececec;" for="name">username:</label><br>
+  <input style="text-align:center; width:20em; color:#ececec; background-color:#000000; font-family:Bahnschrift; font-weight:900; font-size:larger;" type="text" id="name" name="name" value="anonymous" maxlength=25><br>
+  <label style="color:#ececec; " for="msg">message:</label><br>
+  <textarea style="width:65em; height:200px; color:#ececec; background-color:#000000; font-family:Bahnschrift; font-weight:300; font-size:medium;" type="text" id="msg" name="msg" maxlength=2000 spellcheck=true></textarea>
 </form>
 
 <button class="sendbtn"
@@ -24,10 +35,7 @@
 	  if (vname.length < 1) {
 	    alert("username cannot be empty!")
 		passedCheck = false
-	  } else if (vname.length > 25) {
-	    alert(`username too long! \n(expected length of 25--, got ${vname.length})`)
-		passedCheck = false
-	  }
+      }
 	  if (vmsg.length < 1) {
 	    alert("message cannot be empty!")
 		passedCheck = false
