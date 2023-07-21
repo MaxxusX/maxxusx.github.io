@@ -1,0 +1,10 @@
+body {
+    background-color: #011a2a;
+    background-image: url(assets/bg.png);
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: scroll;
+	font-family: Segoe UI Semibold;
+	text-align: center;
+	padding: 20px;
+}
