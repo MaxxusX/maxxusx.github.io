@@ -20,11 +20,12 @@
 			setInterval(antidebug, 10);
 		</script>
 	</head>
-	<body style="background-color:#011a2a;z-index:15;position:sticky;">
+	<body style="background-color:#011a2a;z-index:15;position:sticky;padding:0px;">
 		<div class="topnav" id="TopNav">
 			<a href="index.html">home</a>
 			<a href="#!">socials</a>
 			<a href="message.html" class="active">message me</a>
+			<a href="invaders.html">invaders</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
@@ -40,6 +41,8 @@
 				}
 			}
 		</script>
+	</body>
+	<body style="background-color:#011a2a;z-index:15;position:sticky;">
 		<div id="divmain" style="padding:250px;">
 			<form>
 				<label style="color:#ececec;" for="name">username:</label><br>
@@ -66,10 +69,10 @@
 						
 						const newDiv = document.createElement("div");
 						newDiv.id = "newDiv"
-						newDiv.style="padding:0px;"
+						newDiv.style="padding:0px;margin:auto;"
 						const newContent = document.createElement("iframe");
 						newContent.src="assets/sent.html"
-						newContent.style="height:360px;width:640px;z-index:10;position:fixed;border:8px;border-radius:25px;overflow:hidden;border-style:solid;border-color:black;"
+						newContent.style="height:360px;width:640px;z-index:10;position:fixed;border:8px;border-radius:25px;overflow:hidden;border-style:solid;border-color:black;margin:auto;"
 						newDiv.appendChild(newContent);
 						const currentDiv = document.getElementById("divmain");
 						document.body.insertBefore(newDiv, currentDiv);
