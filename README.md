@@ -6,3 +6,10 @@
     <img src="https://img.shields.io/discord/1123689257979101295?logo=discord&color=black&style=for-the-badge"
        alt="discord"></a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/MaxxusX/maxxusx.github.io/releases/latest">
+    <img src="https://img.shields.io/github/v/release/maxxusx/maxxusx.github.io?style=for-the-badge&color=black"
+      alt="version">
+  </a>
+</p>
