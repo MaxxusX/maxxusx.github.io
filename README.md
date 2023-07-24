@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/MaxxusX/maxxusx.github.io/commits/main">
+    <img src="https://img.shields.io/github/last-commit/maxxusx/maxxusx.github.io/main?style=for-the-badge&logo=github&color=black" alt="latest commit">
+  </a>
   <a href="https://github.com/MaxxusX/maxxusx.github.io/releases/latest">
     <img src="https://img.shields.io/github/v/release/maxxusx/maxxusx.github.io?style=for-the-badge&color=black" alt="version">
   </a>
