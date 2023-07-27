@@ -39,10 +39,10 @@
 				<div class="dropdown-content">
 					<a href="invaders.html">invaders</a>
 					<a href="pacman-js.html">pacman</a>
-					<a href="tetris.html" class="active">tetris</a>
+					<a href="tetris.html">tetris</a>
 					<a href="breakout.html">breakout</a>
 					<a href="snake.html">snake</a>
-					<a href="pong.html">pong</a>
+					<a href="pong.html" class="active">pong</a>
 					<a href="#!">placeholder</a>
 					<a href="#!">placeholder</a>
 					<a href="#!">placeholder</a>
@@ -64,8 +64,14 @@
 				}
 			}
 		</script>
-    <div id="score" class="score" style="z-index:5;"></div>
-    <canvas id="tetris" width="240" height="400" style="z-index:-5" />
-    <script src="tetris.js"></script>
-</body>
+			<div style="overflow:hidden;text-align:center;">
+			<iframe id="pong"
+				style="border:0px;"
+				title="pong"
+				width=1880
+				height=860
+				src="assets/ponggame.html">
+			</iframe>
+		</div>
+	</body>
 </html>
