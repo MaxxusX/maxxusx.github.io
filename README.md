@@ -1,3 +1,5 @@
+# v2 coming with redesign for games page!!!!!!!!!!! (the v2 redesign will not be the full redesign, that's coming in v3.)
+
 <p align="center">
   <a href="https://twitter.com/MaxxusYT2">
     <img src="https://img.shields.io/badge/twitter-%40MaxxusYT2-black?style=for-the-badge&logo=twitter&logoColor=%231D9BF0&labelColor=%23555" alt="twitter"></a>
