@@ -1,65 +1,89 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="universal.css">
-		<title>maxxus // WIP</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	</head>
-	<body style="background-color:#011a2a; padding:0px;">
-			<div class="topnav" id="TopNav" style="padding:0px;">
-			<a href="index.html" class="active">home</a>
-			<a href="#!">socials</a>
-			<a href="message.html">message me</a>
-			<div class="dropdown">
-				<button class="dropbtn">games
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="invaders.html">invaders</a>
-					<a href="pacman-js.html">pacman</a>
-					<a href="tetris.html">tetris</a>
-					<a href="breakout.html">breakout</a>
-					<a href="snake.html">snake</a>
-					<a href="pong.html">pong</a>
-				</div>
-			</div>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-			<div class="dropdown">
-				<button class="dropbtn">other projects
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="encoder.html">encoder</a>
-					<a href="decoder.html">decoder</a>
-				</div>
-			</div>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
-		<script>
-			/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-			function myFunction() {
-				var x = document.getElementById("myTopnav");
-				if (x.className === "topnav") {
-					x.className += " responsive";
-				} else {
-					x.className = "topnav";
-				}
-			}
-		</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>maxxus' site</title>
+<link rel="stylesheet" href="assets/index/style.css">
+<link rel="icon" href="assets/index/favicon.png">
 
-		<div class="header" style="color:#ececec;">
-			<h1 style="color:#ececec;padding-top:17%;">nothing here yet</h1>
-			<h1 style="color:#e3c0b6;">ヽ（≧□≦）ノ</h1>
-			<a href="https://discord.gg/zhgVeJeKVR">
-				discrod
-			</a>
-		</div>
-		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa9a913b2add46e5b58b6c3dd675339f"}'></script><!-- End Cloudflare Web Analytics -->
-	</body>
+<style id="flickering-style">
+        @keyframes flickering {
+            0% { opacity: 0.63 }; 1% { opacity: 0.46 }; 2% { opacity: 0.95 }; 3% { opacity: 0.37 }; 4% { opacity: 0.78 }; 5% { opacity: 0.41 }; 6% { opacity: 1.14 }; 7% { opacity: 0.9 }; 8% { opacity: 0.43 }; 9% { opacity: 1.17 }; 10% { opacity: 0.48 }; 11% { opacity: 0.94 }; 12% { opacity: 0.91 }; 13% { opacity: 0.92 }; 14% { opacity: 0.86 }; 15% { opacity: 0.73 }; 16% { opacity: 0.76 }; 17% { opacity: 1.04 }; 18% { opacity: 0.42 }; 19% { opacity: 0.99 }; 20% { opacity: 0.53 }; 21% { opacity: 0.76 }; 22% { opacity: 1.12 }; 23% { opacity: 1.22 }; 24% { opacity: 0.79 }; 25% { opacity: 0.36 }; 26% { opacity: 0.8 }; 27% { opacity: 0.57 }; 28% { opacity: 1.28 }; 29% { opacity: 1.05 }; 30% { opacity: 0.38 }; 31% { opacity: 0.85 }; 32% { opacity: 1.23 }; 33% { opacity: 1.07 }; 34% { opacity: 0.41 }; 35% { opacity: 0.64 }; 36% { opacity: 0.4 }; 37% { opacity: 0.63 }; 38% { opacity: 0.97 }; 39% { opacity: 1.03 }; 40% { opacity: 0.84 }; 41% { opacity: 1.34 }; 42% { opacity: 0.78 }; 43% { opacity: 0.69 }; 44% { opacity: 1.17 }; 45% { opacity: 0.64 }; 46% { opacity: 1.04 }; 47% { opacity: 1.02 }; 48% { opacity: 0.65 }; 49% { opacity: undefined }; 50% { opacity: 1 }; 
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+<div id="logo">
+<img src="assets/index/images/maxxuslogo.png" class="letter la rain-hitbox" style="margin-right: 0px;">
+</div>
+<table>
+<tbody>
+<tr>
+
+<td id="maintd">
+<div id="cursors"></div>
+<div class="box rain-hitbox" id="mainbox">
+<h2 style="display:inline">Welcome to MAXXUS.PAGES.DEV!</h2><br>
+<img src="assets/index/images/maxxus.png" id="dimdengif">
+<p>
+funny little website!!!! (may have taken "inspiration")
+</p>
+<p>
+i code stuff.
+</p>
+<span>
+quick facts:<br>
+</span>
+<ul style="margin-block-start: 5px">
+<br>
+<li>I am anti furry, if you are furry pls stay away from me.</li>
+<li>My main programming language is Luau.</li>
+<li>I'm anti p2w (hacks included)</li>
+<li>I'm a lego game exploiter.</li>
+<li>I code funny little things like lego game scripts, and whatever else is currently in my small brain.</li>
+</ul>
+</div>
+
+<div class="box rain-hitbox" style="margin-top: 10px;">
+<h2 style="display:inline">Projects</h2>
+<br><br>
+<a target="_blank" rel="nofollow" href="https://maxxus.pages.dev"><h3>website</h3></a><br>
+this website
+</div>
+</td>
+
+<td id="menutd" style="max-width: 225px">
+<div class="box rain-hitbox" id="linksdiv">
+<h2 style="display:inline">Stars</h2>
+<br><br>
+<a class="navlink" href="index.html" id="home-link">✩ Home</a><br>
+<b><a class="navlink" target="_blank" href="https://discord.gg/">✩ Discord</a></b> <i style="color:gray"><-- join!!</i><br>
+<a class="navlink" target="_blank" href="https://twitter.com/MaxxusYT2">✩ Twitter</a><br>
+<a class="navlink" target="_blank" href="https://github.com/maxxusx">✩ GitHub</a><br>
+<a class="navlink" target="_blank" href="indexold.html">✩ old page</a><br>
+</div>
+<marquee scrollamount="3" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" id="buttons-misc">
+<img src="assets/index/images/buttons/win95.gif">
+<img src="assets/index/images/buttons/undertale.gif">
+<img src="assets/index/images/buttons/debian.gif">
+<img src="assets/index/images/buttons/phonechump.gif">
+<img src="assets/index/images/buttons/jquery.gif">
+<img src="assets/index/images/buttons/best_chrome.gif">
+<img src="assets/index/images/buttons/madewithnotepad2.gif">
+<img src="assets/index/images/buttons/neocities.gif">
+</marquee>
+
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<footer>
+<span>Join my <a href="https://discord.gg/" target="_blank">Discord server</a>!!! Please!!!!!</span>
+</footer>
+</div>
+</body>
 </html>
