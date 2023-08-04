@@ -1,5 +1,4 @@
-# v2 coming with redesign for games page!!!!!!!!!!!
-## (the v2 redesign will not be the full redesign, that's coming in v3.)
+# v2 IS HERE!!! MAJOR ROADMAP CHANGES!!! NOTHING IS GOING AS PLANNED!!!!!
 
 <p align="center">
   <a href="https://twitter.com/MaxxusYT2">
