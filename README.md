@@ -1,6 +1,6 @@
-<p align="center">
-  # v2 IS HERE!!!
-</p>
+<h1 align="center" style="font-size: 100px;">
+  v2 IS HERE!!!
+</h1>
 <p align="center">
   <a href="https://twitter.com/MaxxusYT2">
     <img src="https://img.shields.io/badge/twitter-%40MaxxusYT2-black?style=for-the-badge&logo=twitter&logoColor=%231D9BF0&labelColor=%23555" alt="twitter"></a>
