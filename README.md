@@ -1,5 +1,5 @@
 <h1 align="center" style="font-size: 100px;">
-  v2 IS HERE!!!
+  the actual redesign is being worked on (v3)
 </h1>
 <p align="center">
   <a href="https://twitter.com/MaxxusYT2">
