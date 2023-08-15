@@ -1,0 +1,215 @@
+@font-face {
+	font-family: pixel nes;
+	src: url(fonts/Pixel_NESd41d.eot?) format("eot"),url(fonts/Pixel_NES.woff) format("woff"),url(fonts/Pixel_NES.ttf) format("truetype"),url(fonts/Pixel_NES.html#PixelNES) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:nec_apc3;src:url(fonts/pixelfonts/Web437_NEC_APC3_8x16.woff) format("woff");font-weight:400;font-style:normal;
+}
+
+@font-face {
+	font-family:nec_apc3;src:url(fonts/pixelfonts/Web437_Nix8810_M16.woff) format("woff");font-weight:700;font-style:normal;
+}
+
+@font-face {
+	font-family:russiangothic;src:local("Arial");font-weight:400;font-style:normal;unicode-range:U+0420-42FF;
+}
+
+@font-face {
+	font-family:digital;src:url(fonts/Digital-7d41d.ttf?) format("truetype");font-weight:400;font-style:normal;
+}
+
+@font-face {
+	font-family:"perfect dos vga 437 win";src:url("fonts/Perfect%20DOS%20VGA%20437%20Wind41d.ttf?") format("truetype");font-weight:400;font-style:normal;
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0;
+	margin-top: 10px;
+}
+
+:root {
+	--body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #00ffab45;
+	--green-text-shadow: 0 0 20px #08bd9882;
+	--letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
+	--firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
+	--firefox-green-shadow: 0 0 20px #08bd994f;
+}
+
+body,#debug {
+	image-rendering: pixelated;
+	font-family: russiangothic,ms ui gothic,nec_apc3,Tahoma;
+	background-color: #000;
+	text-shadow: var(--body-text-shadow);
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+}
+
+h1 {
+	color: #2c902c;
+	font-family: pixel nes;
+	margin: 0;
+	text-shadow: var(--green-text-shadow);
+}
+
+h2 {
+	color: #2c902c;
+	font-family: pixel nes;
+	margin: 0;
+	text-shadow: var(--green-text-shadow);
+}
+
+a {
+	text-decoration: none;
+	color: #2c902c;
+	text-shadow: var(--green-text-shadow);
+}
+
+@media screen and (min-width:601px) {
+@	supports(-moz-appearance:none) {
+		body{text-shadow: var(--firefox-body-shadow)!important;
+	}
+
+	h2 {
+		text-shadow: var(--firefox-green-shadow)!important;
+	}
+
+	a {
+		text-shadow: var(--firefox-green-shadow)!important;
+	}
+}
+
+body:before {
+	content: "";
+	position: fixed;
+	opacity: .2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(images/overlay.png);
+	background-repeat: all;
+	background-position: 0 0;
+	animation-name: Static;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+	box-shadow: inset 0 0 10em rgb(0 0 0/40%);
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	opacity: .5;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(images/overlay2.png);
+	background-repeat: all;
+	background-position: 0 0;
+	animation-name: Static;
+	animation-duration: .8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+}}
+
+#container,#backside-container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#logo {
+	text-align: center;
+	padding-top: 5px;
+	margin-right: 50px;
+}
+
+#maintd {
+	width: 675px;
+	vertical-align: baseline;
+}
+
+#menutd {
+	width: 225px;
+	vertical-align: baseline;
+}
+
+.box {
+	background-color: #000000a8;
+	border: 2px solid #383838;
+	border-radius: 4px;
+	color: #fff;
+	padding: 10px 15px;
+	margin: 5px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.navlink {
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 3px;
+}
+
+.centerbox {
+	text-align: center;
+}
+
+textarea {
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #383838;
+	font-family: MS Gothic,monospace;
+	resize: none;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(70,70,70,.479);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #1f1f1f;
+	outline: 1px solid #1a503b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #1f1f1f;
+	outline: 1px solid #297c5c;
+}
+
+.logo {
+	display: inline;
+	height: 60px;
+	filter: var(--letter-shadow);
+}
+
+footer {
+	text-align: center;
+	color: #fff;
+}
+
+h3 {
+	margin: 0;
+}
+
+#maxxuspfp {
+	float: left;
+	border: 1px solid #297c5c;
+	margin: 10px 10px 5px 5px;
+	width: 100px;
+	height: 94px;
+}

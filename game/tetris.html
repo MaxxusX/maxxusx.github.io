@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>maxxus // tetris</title>
+		<link rel="stylesheet" href="../universal.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="icon" href="../assets/favicon.png">
+		<style>
+			body {
+				font-size: 1.5em;
+				text-align: center;
+				color: #ececec;
+			}
+
+			canvas {
+				border: solid .2em #fff;
+				height: 90vh;
+				margin-top: -20px;
+				z-index: -5;
+			}
+
+			.score {
+				z-index: 5;
+				font-size: 2em;
+				padding-top: 20px;
+				margin-bottom: -50px;
+				text-align: center;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body style="background-color:#011a2a;padding:0px;">
+		<div class="topnav" id="TopNav" style="padding:0px; text-align:center; justify-content: center;">
+			<a style="text-align: center; justify-content: center; width:98%;" href="../games.html">back</a>
+		</div>
+		<div id="score" class="score" style="z-index:5;"></div>
+		<canvas id="tetris" width="240" height="400" style="z-index:-5" />
+		<script src="tetris.js"></script>
+	</body>
+</html>
