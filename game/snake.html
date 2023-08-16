@@ -1,18 +1,11 @@
 <html>
 	<head>
 		<title>maxxus // snake</title>
-		<link rel="stylesheet" href="../universal.css">
+		<link rel="stylesheet" href="../assets/style.css">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="icon" href="../assets/favicon.png">
 		<style>
-			html,
-			body {
-				height: 100%;
-				margin: 0;
-			}
-
 			canvas {
 				border: 1px solid white;
 			}
@@ -32,11 +25,21 @@
 			}
 		</style>
 	</head>
-	<body style="background-color:#011a2a;padding:0px;">
-		<div class="topnav" id="TopNav" style="padding:0px; text-align:center; justify-content: center;">
-			<a style="text-align: center; justify-content: center; width:98%;" href="../games.html">back</a>
+	<body>
+		<div id="container">
+			<table>
+				<tbody>
+					<tr>
+						<td id="maintd" style="margin: auto; text-align: center; padding: 0 100px;">
+							<div class="box" id="mainbox" style="margin: auto; margin-top: 0px; margin-bottom: 5px; text-align: center;">
+								<a style="font-size:20px;" rel="nofollow" href="../games.html"><h3>back</h3></a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<div id="inner" style="overflow:hidden;position:relative;">
+		<div id="inner" style="overflow:hidden;position:relative;margin: 0;">
 			<canvas width="400" height="400" id="game" style="background-color:black;"></canvas>
 			<script>
 				var canvas = document.getElementById('game');
