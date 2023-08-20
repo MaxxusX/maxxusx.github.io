@@ -31,10 +31,6 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	margin-top: 10px;
-	font-size: 19px;
-	padding: 0, 50px;
-	margin-left: 50px;
-	margin-right: 50px;
 }
 
 :root {
@@ -59,7 +55,6 @@ h1 {
 	font-family: "Twemoji", pixel nes;
 	margin: 0;
 	text-shadow: var(--green-text-shadow);
-	font-size: 40px;
 }
 
 h2 {
@@ -67,7 +62,6 @@ h2 {
 	font-family: "Twemoji", pixel nes;
 	margin: 0;
 	text-shadow: var(--green-text-shadow);
-	font-size: 30px;
 }
 
 a {
@@ -123,15 +117,15 @@ body:after {
 	background-image: url(images/overlay2.png);
 	background-repeat: all;
 	background-position: 0 0;
+	animation-name: Static;
+	animation-duration: .8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
 }}
 
 #container,#backside-container {
-	width: 1800px;
+	width: 900px;
 	margin: 0 auto;
-	display: grid;
-	align-items: center;
-	align-self: center;
-	justify-content: center;
 }
 
 #logo {
@@ -141,23 +135,21 @@ body:after {
 }
 
 #maintd {
-	width: 1350px;/*675px*/
+	width: 675px;
 	vertical-align: baseline;
-	margin: auto;
 }
 
 #menutd {
-	width: 450px;/*225px*/
+	width: 225px;
 	vertical-align: baseline;
-	margin: auto;
 }
 
 .box {
 	background-color: #000000a8;
 	border: 2px solid #383838;
-	border-radius: 6px;
+	border-radius: 4px;
 	color: #fff;
-	padding: 15px 15px;
+	padding: 10px 15px;
 	margin: 5px;
 }
 
@@ -184,7 +176,7 @@ textarea {
 }
 
 ::-webkit-scrollbar {
-	width: 3px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -214,29 +206,17 @@ footer {
 
 h3 {
 	margin: 0;
-	font-size: 25px;
-}
-
-p {
 	font-size: 20px;
-}
-
-li {
-	font-size: 18px;
 }
 
 #maxxuspfp {
 	float: left;
 	border: 0px solid #297c5c;
 	margin: 10px 10px 5px 5px;
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 }
 
 iframe {
 	z-index: 5000;
-}
-
-#splash {
-	font-size: 16px;
 }

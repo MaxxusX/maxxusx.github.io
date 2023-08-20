@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.4.1",
+		description: "make use of empty space, more splashes, and some improvements",
+		imageurl: ``,
+	},
+	{
 		version: "v2.4",
 		description: "<a href=\"updatelogs.html\">new updates page</a>! added 404 page! more splashes! and minor changes, bug fixes, improvements",
 		imageurl: ``,
@@ -92,10 +97,3 @@ const updates = [
 		imageurl: ``,
 	},
 ];
-
-const updatesbox = document.getElementById("updatesbox")
-updates.forEach(update => {
-    updatesbox.innerHTML += `<h2>${update.version}</h2>`
-    updatesbox.innerHTML += `${update.description}`
-    updatesbox.innerHTML += `<br><br><br><br>`
-})

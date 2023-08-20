@@ -29,11 +29,19 @@
 				</tbody>
 			</table>
 			<br>
-			<footer>
-				<span id="splash">loading...</span>
-				<script src="assets/splash.js"></script>
-			</footer>
 		</div>
 		<script src="updates.js"></script>
+		<script>
+			const updatesbox = document.getElementById("updatesbox")
+			updates.forEach(update => {
+				updatesbox.innerHTML += `<h2>${update.version}</h2>`
+				updatesbox.innerHTML += `${update.description}`
+				updatesbox.innerHTML += `<br><br><br>`
+			})
+		</script>
+		<footer>
+			<span id="splash">loading...</span>
+			<script src="assets/splash.js"></script>
+		</footer>
 	</body>
 </html>

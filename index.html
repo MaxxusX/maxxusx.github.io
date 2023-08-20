@@ -8,8 +8,9 @@
 		<title>maxxus' site</title>
 		<link rel="stylesheet" href="assets/style.css">
 		<link rel="icon" href="assets/favicon.png">
+		<script src="updates.js"></script><!-- get versions for version number -->
 	</head>
-	<body>
+	<body style="padding: 0, 50px; margin-left: 50px; margin-right: 50px;">
 		<div id="container">
 			<div id="logo">
 				<img src="assets/images/maxxuslogo.png" class="logo" style="margin-right: 0px;">
@@ -19,15 +20,18 @@
 					<tr>
 						<td id="maintd">
 							<div class="box" id="mainbox">
-								<h2 style="display:inline">2.4</h2> <!-- PUT VERSION HERE -->
+								<h2 id="version" style="display:inline"></h2>
 								<br>
 								<img src="assets/images/maxxus.png" id="maxxuspfp">
+								<br><br>
 								<p> funny little website!!!!</p>
 								<p> i code stuff. </p>
 								<br>
 								<ul style="margin-block-start: 5px">
 									<br>
-									<li>I am anti furry, if you are furry pls stay away from me.</li>
+									<li>I learned how to code by using "OUR" code and messing with it.</li>
+									<li>don't question it</li>
+									<li>I'm anti furry, if you are furry go away.</li>
 									<li>My main programming language is Luau.</li>
 									<li>I'm anti p2w (hacks included)</li>
 									<li>I'm a lego game exploiter.</li>
@@ -103,10 +107,13 @@
 				</tbody>
 			</table>
 			<br>
-			<footer>
-				<span id="splash">loading...</span>
-				<script src="assets/splash.js"></script>
-			</footer>
 		</div>
+		<footer>
+			<span id="splash">loading...</span>
+			<script src="assets/splash.js"></script>
+		</footer>
+		<script>
+			document.getElementById("version").innerHTML = updates[0].version
+		</script>
 	</body>
 </html>
