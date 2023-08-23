@@ -240,3 +240,9 @@ iframe {
 #splash {
 	font-size: 16px;
 }
+
+#meme {
+	display: inline;
+	width: 250px;
+	filter: var(--letter-shadow);
+}

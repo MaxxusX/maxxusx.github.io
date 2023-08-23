@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="assets/style.css">
 		<link rel="icon" href="assets/favicon.png">
 		<script src="updates.js"></script><!-- get versions for version number -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script><!-- installing the evil jquery for a stupid problem im too lazy to fix -->
+		{% seo %}
 	</head>
 	<body style="padding: 0, 50px; margin-left: 50px; margin-right: 50px;">
 		<div id="container">
@@ -16,95 +18,95 @@
 				<img src="assets/images/maxxuslogo.png" class="logo" style="margin-right: 0px;">
 			</div>
 			<table>
-				<tbody>
-					<tr>
-						<td id="maintd">
-							<div class="box" id="mainbox">
-								<h2 id="version" style="display:inline"></h2>
-								<br>
-								<img src="assets/images/maxxus.png" id="maxxuspfp">
-								<br><br>
-								<p> funny little website!!!!</p>
-								<p> i code stuff. </p>
-								<br>
-								<ul style="margin-block-start: 5px">
-									<br>
-									<li>I learned how to code by using "OUR" code and messing with it.</li>
-									<li>don't question it</li>
-									<li>I'm anti furry, if you are furry go away.</li>
-									<li>My main programming language is Luau.</li>
-									<li>I'm anti p2w (hacks included)</li>
-									<li>I'm a lego game exploiter.</li>
-									<li>I code funny little things like lego game scripts, and whatever else is currently in my small brain.</li>
-								</ul>
-							</div>
-							<div class="box" style="margin-top: 10px;">
-								<h2 style="display:inline">Projects</h2>
-								<br>
-								<br>
-								<a rel="nofollow" href="#!">
-									<h3>website</h3>
-								</a> this website <br>
-								<br>
-								<a target="_blank" rel="nofollow" href="https://create.roblox.com/marketplace/asset/14331240486/exec">
-									<h3>exec</h3>
-								</a> roblox serverside code executor <br>
-								<br>
-								<a target="_blank" rel="nofollow" href="https://github.com/MaxxusX/hosts">
-									<h3>hosts file</h3>
-								</a> protect yourself from everything, from furry sites, to malware sites!
-							</div>
-						</td>
-						<td id="menutd" style="max-width: 225px">
-							<div class="box" id="linksdiv">
-								<h2 style="display:inline">dir</h2>
-								<br>
-								<br>
-								<a class="navlink" href="index.html" id="home-link">home</a>
-								<br>
-								<a class="navlink" target="_blank" href="https://discord.gg/">discord</a>
-								<br>
-								<a class="navlink" target="_blank" href="https://twitter.com/MaxxusYT2">twitter</a>
-								<br>
-								<a class="navlink" target="_blank" href="https://github.com/maxxusx">github</a>
-								<br>
-								<a class="navlink" href="games.html">games</a>
-								<br>
-								<a class="navlink" href="updatelogs.html">updates</a>
-								<br>
-							</div>
-							<marquee scrollamount="5" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" id="buttons-misc">
-								<img src="assets/images/buttons/win95.gif">
-								<img src="assets/images/buttons/undertale.gif">
-								<img src="assets/images/buttons/debian.gif">
-								<img src="assets/images/buttons/phonechump.gif">
-								<img src="assets/images/buttons/jquery.gif">
-								<img src="assets/images/buttons/best_chrome.gif">
-								<img src="assets/images/buttons/madewithnotepad2.gif">
-								<img src="assets/images/buttons/neocities.gif">
-								<img src="assets/images/buttons/88x31.png">
-								<img src="assets/images/buttons/antinft.gif">
-								<img src="assets/images/buttons/bestviewed.gif">
-								<img src="assets/images/buttons/clubpenguin.png">
-								<img src="assets/images/buttons/css.png">
-								<img src="assets/images/buttons/glue.jpg">
-								<img src="assets/images/buttons/ilikecomputer.png">
-								<img src="assets/images/buttons/minecraft.gif">
-								<img src="assets/images/buttons/mspaint.gif">
-								<img src="assets/images/buttons/neocitiescat.png">
-								<img src="assets/images/buttons/nofuckingthanks.gif">
-								<img src="assets/images/buttons/playstation.gif">
-								<img src="assets/images/buttons/screwyall.gif">
-								<img src="assets/images/buttons/thevoid.gif">
-								<img src="assets/images/buttons/web3.gif">
-								<img src="assets/images/buttons/webdesign.gif">
-								<img src="assets/images/buttons/wii.gif">
-								<img src="assets/images/buttons/windowsxp.gif">
-								<img src="assets/images/buttons/osu.png">
-							</marquee>
-						</td>
-					</tr>
-				</tbody>
+				<td id="maintd">
+					<div class="box" id="mainbox">
+						<h2 id="version" style="display:inline"></h2>
+						<br>
+						<img src="assets/images/maxxus.png" id="maxxuspfp">
+						<br><br>
+						<p> funny little website!!!!</p>
+						<p> i code stuff. </p>
+						<br>
+						<ul style="margin-block-start: 5px">
+							<br>
+							<li>I learned how to code by using "OUR" code and messing with it.</li>
+							<li>don't question it</li>
+							<li>I'm anti furry, if you are furry go away.</li>
+							<li>My main programming language is Luau.</li>
+							<li>I'm anti p2w (hacks included)</li>
+							<li>I'm a lego game exploiter.</li>
+							<li>I code funny little things like lego game scripts, and whatever else is currently in my small brain.</li>
+						</ul>
+					</div>
+					<div class="box" style="margin-top: 10px;">
+						<h2 style="display:inline">Projects</h2>
+						<br>
+						<br>
+						<a rel="nofollow" href="#!">
+							<h3>website</h3>
+						</a> this website <br>
+						<br>
+						<a target="_blank" rel="nofollow" href="https://create.roblox.com/marketplace/asset/14331240486/exec">
+							<h3>exec</h3>
+						</a> roblox serverside code executor <br>
+						<br>
+						<a target="_blank" rel="nofollow" href="https://github.com/MaxxusX/hosts">
+							<h3>hosts file</h3>
+						</a> protect yourself from everything, from furry sites, to malware sites!
+					</div>
+				</td>
+				<td id="menutd" style="max-width: 225px">
+					<div class="box" id="linksdiv">
+						<h2 style="display:inline">dir</h2>
+						<br>
+						<br>
+						<a class="navlink" href="index.html" id="home-link">home</a>
+						<br>
+						<a class="navlink" target="_blank" href="https://discord.gg/">discord</a>
+						<br>
+						<a class="navlink" target="_blank" href="https://twitter.com/MaxxusYT2">twitter</a>
+						<br>
+						<a class="navlink" target="_blank" href="https://github.com/maxxusx">github</a>
+						<br>
+						<a class="navlink" href="games.html">games</a>
+						<br>
+						<a class="navlink" href="updatelogs.html">updates</a>
+						<br>
+					</div>
+					<marquee scrollamount="5" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" id="buttons-misc">
+						<img src="assets/images/buttons/win95.gif">
+						<img src="assets/images/buttons/undertale.gif">
+						<img src="assets/images/buttons/debian.gif">
+						<img src="assets/images/buttons/phonechump.gif">
+						<img src="assets/images/buttons/jquery.gif">
+						<img src="assets/images/buttons/best_chrome.gif">
+						<img src="assets/images/buttons/madewithnotepad2.gif">
+						<img src="assets/images/buttons/neocities.gif">
+						<img src="assets/images/buttons/88x31.png">
+						<img src="assets/images/buttons/antinft.gif">
+						<img src="assets/images/buttons/bestviewed.gif">
+						<img src="assets/images/buttons/clubpenguin.png">
+						<img src="assets/images/buttons/css.png">
+						<img src="assets/images/buttons/glue.jpg">
+						<img src="assets/images/buttons/ilikecomputer.png">
+						<img src="assets/images/buttons/minecraft.gif">
+						<img src="assets/images/buttons/mspaint.gif">
+						<img src="assets/images/buttons/neocitiescat.png">
+						<img src="assets/images/buttons/nofuckingthanks.gif">
+						<img src="assets/images/buttons/playstation.gif">
+						<img src="assets/images/buttons/screwyall.gif">
+						<img src="assets/images/buttons/thevoid.gif">
+						<img src="assets/images/buttons/web3.gif">
+						<img src="assets/images/buttons/webdesign.gif">
+						<img src="assets/images/buttons/wii.gif">
+						<img src="assets/images/buttons/windowsxp.gif">
+						<img src="assets/images/buttons/osu.png">
+					</marquee>
+					<br><br><br>
+					<div id="memediv">
+						<!-- <img src="assets/images/memes/meme.png" id="meme"> -->
+					</div>
+				</td>
 			</table>
 			<br>
 		</div>
@@ -112,7 +114,9 @@
 			<span id="splash">loading...</span>
 			<script src="assets/splash.js"></script>
 		</footer>
+		<script src="assets/memes.js"></script>
 		<script>
+			// changes version num at top of page
 			document.getElementById("version").innerHTML = updates[0].version
 		</script>
 	</body>
