@@ -155,7 +155,7 @@ body:after {
 .box {
 	background-color: #000000a8;
 	border: 2px solid #383838;
-	border-radius: 6px;
+	border-radius: 0px;
 	color: #fff;
 	padding: 15px 15px;
 	margin: 5px;
@@ -245,4 +245,9 @@ iframe {
 	display: inline;
 	width: 250px;
 	filter: var(--letter-shadow);
+}
+
+marquee {
+	padding-top: 10px;
+	padding-bottom: 8px;
 }
