@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.4.4",
+		description: "fix analytics",
+		imageurl: ``,
+	},
+	{
 		version: "v2.4.3",
 		description: "more cats and splashes, small changes, added some <b>[HSP]</b> s for readability",
 		imageurl: ``,
