@@ -126,7 +126,7 @@ body:after {
 }}
 
 #container,#backside-container {
-	width: 1800px;
+	max-width: 1800px;
 	margin: 0 auto;
 	display: grid;
 	align-items: center;
@@ -141,6 +141,7 @@ body:after {
 }
 
 #maintd {
+	max-width: 1350px;
 	width: 1350px;/*675px*/
 	vertical-align: baseline;
 	margin: auto;
@@ -243,7 +244,9 @@ iframe {
 
 #meme {
 	display: inline;
-	width: 250px;
+	min-width: 150px;
+	max-width: 250px;
+	max-height: 300px;
 	filter: var(--letter-shadow);
 }
 

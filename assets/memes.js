@@ -1,27 +1,27 @@
 const memes = `
-balls.png
+balls.jpeg
 bingus.gif
 hewwo.gif
 gyuyhuahuahrhgrhuifufrraujl.gif
 get real.gif
-his ass is NOT lifting.png
-fibrous powder.png
+his ass is NOT lifting.jpeg
+fibrous powder.jpeg
 dance.gif
 evil and treacherous and malicious.gif
 Byuntear.gif
 borgir.gif
 boom.gif
 i am going insane.gif
-money getting tight.png
+money getting tight.jpeg
 miguel.gif
 mind blown.gif
-this delinquint died.png
+this delinquint died.jpeg
 yay.gif
-will you him his order.png
-uhhhh.png
-catscale.png
-harmacy.png
-fanter.png
+will you him his order.jpeg
+uhhhh.jpeg
+catscale.jpeg
+harmacy.jpeg
+fanter.jpeg
 atomicbomb.gif
 cheese.gif
 cat-the-cat.gif
