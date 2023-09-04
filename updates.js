@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.4.6",
+		description: "change favicon and pfp. removed logo. fixed games not resizing.",
+		imageurl: ``,
+	},
+	{
 		version: "v2.4.5",
 		description: "fix resizing. mobile should work now. other fixes related to size. optimize shit.",
 		imageurl: ``,
