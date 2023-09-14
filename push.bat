@@ -1,4 +1,6 @@
 @echo off
+git add .
+cls
 set /p commitmsg="commit msg: "
 echo git add .
 git add .
