@@ -77,7 +77,7 @@ a {
 }
 
 @media screen and (min-width:601px) {
-@	supports(-moz-appearance:none) {
+@supports(-moz-appearance:none) {
 		body{text-shadow: var(--firefox-body-shadow)!important;
 	}
 
