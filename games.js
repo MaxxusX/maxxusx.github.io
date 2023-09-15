@@ -91,7 +91,7 @@ const data = [
 
 const gamesdiv = document.getElementById("games")
 data.forEach(game => {
-    gamesdiv.innerHTML += `<a style="font-size:20px;" rel="nofollow" href="${game.link}"><h3>${game.name}</h3></a>
+    gamesdiv.innerHTML += `<a style="font-size:20px;" rel="nofollow" href="${game.link}"><h3 class="hoverthing">${game.name}</h3></a>
 	<b>${game.devices}</b>
 	<br>
 	<b>unblocked: ${game.unblocked}</b>

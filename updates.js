@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.4.9",
+		description: "new cool hover event thingy on some links",
+		imageurl: ``,
+	},
+	{
 		version: "v2.4.8-fix-fix-fix-fix",
 		description: "i am crying rn annd in pain please send help bro help me help me the fog is coming the fog is coming the fo",
 		imageurl: ``,

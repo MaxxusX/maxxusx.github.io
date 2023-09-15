@@ -254,3 +254,10 @@ marquee {
 	padding-top: 10px;
 	padding-bottom: 8px;
 }
+
+.hoverthing:hover:after {
+	content:' <';
+}
+.hoverthing:hover:before {
+	content:'> ';
+}
