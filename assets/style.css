@@ -28,6 +28,7 @@
 }
 
 body {
+	cursor: url('cursor.png') 15 15, auto;
 	overflow-x: hidden;
 	margin: 0;
 	margin-top: 10px;
@@ -71,6 +72,7 @@ h2 {
 }
 
 a {
+	cursor: url('cursor.png') 15 15, auto;
 	text-decoration: none;
 	color: #2c902c;
 	text-shadow: var(--green-text-shadow);
@@ -170,6 +172,7 @@ a:hover {
 	color: #fff;
 	display: inline-block;
 	margin-bottom: 3px;
+	cursor: url('cursor.png') 15 15, auto;
 }
 
 .centerbox {
@@ -182,6 +185,7 @@ textarea {
 	border: 1px solid #383838;
 	font-family: "Twemoji", MS Gothic,monospace;
 	resize: none;
+	cursor: url('cursor.png') 15 15, auto;
 }
 
 ::-webkit-scrollbar {
@@ -255,9 +259,23 @@ marquee {
 	padding-bottom: 8px;
 }
 
+.hoverthing:hover {
+	text-decoration: none;
+}
+
 .hoverthing:hover:after {
 	content:' <';
 }
 .hoverthing:hover:before {
 	content:'> ';
+}
+
+.nodecor:hover {
+	text-decoration: none;
+}
+
+.popoutthing:hover {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
 }
