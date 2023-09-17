@@ -40,6 +40,7 @@ permalink: /404.html
 			}
 
 			body {
+				cursor: url('https://maxxus.pages.dev/assets/cursor.png') 15 15, auto;
 				overflow-x: hidden;
 				margin: 0;
 				margin-top: 10px;
@@ -83,6 +84,7 @@ permalink: /404.html
 			}
 
 			a {
+				cursor: url('https://maxxus.pages.dev/assets/cursor.png') 15 15, auto;
 				text-decoration: none;
 				color: #2c902c;
 				text-shadow: var(--green-text-shadow);
@@ -265,6 +267,28 @@ permalink: /404.html
 			marquee {
 				padding-top: 10px;
 				padding-bottom: 8px;
+			}
+			
+			.hoverthing:hover {
+				text-decoration: none;
+			}
+
+			.hoverthing:hover:after {
+				content:' <';
+			}
+			
+			.hoverthing:hover:before {
+				content:'> ';
+			}
+
+			.nodecor:hover {
+				text-decoration: none;
+			}
+
+			.popoutthing:hover {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-weight: bold;
 			}
 		</style>
 	</head>
