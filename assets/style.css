@@ -39,6 +39,7 @@ body {
 }
 
 :root {
+	cursor: url('cursor.png') 15 15, auto;
 	--body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #00ffab45;
 	--green-text-shadow: 0 0 20px #08bd9882;
 	--letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
