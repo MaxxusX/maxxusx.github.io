@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script src="assets/universal.js"></script>
+		<link rel="preload" href="assets/box.png">
+		<link rel="icon" href="assets/favicon.png">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>maintenance</title>
-		<link rel="icon" href="assets/favicon.png">
 		<style>
+			@font-face {
+				font-family: "Twemoji";
+				src: url(fonts/Twemoji.ttf) format("truetype");
+				unicode-range: U+00A9, U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
+			}
 			:root {
 				overflow-x: hidden;
 				margin: 0 auto;
-				font-size: 60px;
 				color: white;
-				background-color: black;
-				cursor: url('./assets/cursor.png') 15 15, auto;
+				background-color: gray;
+				cursor: url('assets/cursor.png') 15 15, auto;
 				vertical-align: baseline;
 				text-align: center;
+				display: grid;
+				align-items: center;
+				align-self: center;
+				justify-content: center;
+				font-family: "Twemoji",russiangothic,ms ui gothic,nec_apc3,Tahoma;
+			}
+			.box {
+				padding-top: 5px;
+				margin: 1em;
+				object-fit: fill;
+				position: relative;
+				font-size: 3em;
+			}
+			.box p {
+				font-size: 0.5em;
+			}
+			.boximg {
+				object-fit: fill;
+				z-index: -10;
+				position: relative;
+			}
+			.boxcontent {
+				z-index: 10;
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 30%;
+			}
+			.container:before {
+				max-width: 1800px;
+				margin: 0 auto;
 				display: grid;
 				align-items: center;
 				align-self: center;
@@ -25,11 +60,13 @@
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class="container">
 			<table>
 				<td>
-					<div>
-						<h1>maintenance<h1>
+					<div class="box">
+						<img class="boximg" src="assets/box.png">
+						<h1 class="boxcontent">maintenance</h1>
+						<p class="boxcontent" style="top:60%;">this site is undergoing a redesign. be back soon™</p>
 					</div>
 				</td>
 			</table>
