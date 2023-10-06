@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preload" href="assets/newstyle.css" as="style">
+		<script src="assets/universal.js"></script>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>maxxus' site</title>
+		<link rel="stylesheet" href="assets/newstyle.css">
+		<link rel="icon" href="assets/favicon.png">
+		<script src="updates.js"></script><!-- get versions for version number -->
+	</head>
+	<body>
+		<h1 class="center">mxs</h1>
+		<div id="container">
+			<table>
+				<td id="bigtd">
+					<div class="box">
+						<br>
+						<p id="version"></p>
+						<p>© 2023 Maxxus. All rights reserved.</p>
+						<br>
+						<div id="consoletest"></div>
+						<br>
+						<input wrap="off" placeholder="help" type="text" id="inputbox" name="inputbox" maxlength=120 spellcheck=false></input>
+						<br><br>
+					</div>
+				</td>
+			</table>
+			<br>
+		</div>
+		<footer>
+			<span id="splash"></span>
+			<script src="assets/splash.js"></script>
+		</footer>
+		<script> // console code
+			// use <br> for new lines
+
+			function showText(message, index) {
+				let msg = message.replaceAll("<br>", "↳")
+				if (index === undefined) { let index = 0; };
+				if (index < msg.length) {
+					document.getElementById("consoletest").innerHTML += msg[index++];
+					document.getElementById("consoletest").innerHTML = document.getElementById("consoletest").innerHTML.replaceAll("↳", "<br>");
+					setTimeout(function () { showText(msg, index); }, (msg.length / 6) + 1);
+				}
+			}
+
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			sleep(500).then(() => { showText("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter", 0); });
+
+			const input = document.getElementById("inputbox")
+
+			input.addEventListener("keyup", ({key}) => {
+				if (key === "Enter") {
+					runCommand(input.value)
+				}
+			})
+
+			function runCommand(command) {
+				input.value = "";
+				document.getElementById("consoletest").innerHTML = "";
+				cmd = command.split(" ")[0]
+				arg = command.split(" ")[1]
+				if (cmd === "help") { showText("help: see this list<br>eval: run code<br>home: homepage", 0); }
+				else if (cmd === "eval") { function evalthing() { try { eval(arg); } catch (e) { return e.message; }; }; showText(`ran js:<br>${arg}<br><br>output:<br>` + evalthing(), 0); }
+				else if (cmd === "home") { showText("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter", 0); }
+				else { showText("command not found", 0); }
+			}
+		</script>
+		<script>
+			// changes version num at top of page
+			document.getElementById("version").innerHTML = "mxs terminal [" + updates[0].version + "]"
+		</script>
+		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "749939e3193f404482d44493b21b2c99"}'></script><!-- End Cloudflare Web Analytics -->
+	</body>
+</html>

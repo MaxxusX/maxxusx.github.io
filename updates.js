@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.5-terminal",
+		description: "some little stuff, started work on the terminal style",
+		imageurl: ``,
+	},
+	{
 		version: "v2.4.9.1-hotfix",
 		description: "fixed 404 page",
 		imageurl: ``,
