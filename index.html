@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="preload" href="assets/box.png">
-		<link rel="icon" href="assets/favicon.png">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>maintenance</title>
-		<style>
-			@font-face {
-				font-family: "Twemoji";
-				src: url(fonts/Twemoji.ttf) format("truetype");
-				unicode-range: U+00A9, U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
-			}
-			:root {
-				overflow-x: hidden;
-				margin: 0 auto;
-				color: white;
-				background-color: gray;
-				cursor: url('assets/cursor.png') 15 15, auto;
-				vertical-align: baseline;
-				text-align: center;
-				display: grid;
-				align-items: center;
-				align-self: center;
-				justify-content: center;
-				font-family: "Twemoji",russiangothic,ms ui gothic,nec_apc3,Tahoma;
-			}
-			.box {
-				padding-top: 5px;
-				margin: 1em;
-				object-fit: fill;
-				position: relative;
-				font-size: 3em;
-			}
-			.box p {
-				font-size: 0.5em;
-			}
-			.boximg {
-				object-fit: fill;
-				z-index: -10;
-				position: relative;
-			}
-			.boxcontent {
-				z-index: 10;
-				position: absolute;
-				width: 100%;
-				left: 0;
-				top: 30%;
-			}
-			.container:before {
-				max-width: 1800px;
-				margin: 0 auto;
-				display: grid;
-				align-items: center;
-				align-self: center;
-				justify-content: center;
-			}
-		</style>
+		<link rel="preload" href="assets/newstyle.css" as="style">
+		<script src="assets/universal.js"></script>
+		<title>maxxus' site</title>
+		<link rel="stylesheet" href="assets/newstyle.css">
+		<link rel="icon" href="assets/favicon.png">
+		<script src="updates.js"></script><!-- get versions for version number -->
 	</head>
 	<body>
-		<div class="container">
+		<h1 class="center">mxs</h1>
+		<div id="container">
 			<table>
-				<td>
+				<td id="bigtd">
 					<div class="box">
-						<img class="boximg" src="assets/box.png">
-						<h1 class="boxcontent">maintenance</h1>
-						<p class="boxcontent" style="top:60%;">this site is undergoing a redesign. be back soon™</p>
+						<p id="version" class="consoleaot"></p>
+						<p class="consoleaot">© 2023 Maxxus. All rights reserved.</p>
+						<br>
+						<div id="consoletest"></div>
+						<br>
+						<input wrap="off" placeholder="help" type="text" id="inputbox" name="inputbox" maxlength=120 spellcheck=false></input>
 					</div>
 				</td>
 			</table>
+			<br>
 		</div>
+		<footer>
+			<span id="splash"></span>
+			<script src="assets/splash.js"></script>
+		</footer>
+		<script> // console code
+			// use <br> for new lines
+
+			function slowPrint(message, index) {
+				let msg = message.replaceAll("<br>", "↳")
+				if (index === undefined) { let index = 0; };
+				if (index < msg.length) {
+					document.getElementById("consoletest").innerHTML += msg[index++];
+					document.getElementById("consoletest").innerHTML = document.getElementById("consoletest").innerHTML.replaceAll("↳", "<br>");
+					setTimeout(function () { slowPrint(msg, index); }, (msg.length / 8) + 1);
+				}
+			};
+
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			};
+
+			//sleep(500).then(() => { slowPrint("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter", 0); });
+
+			print("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter");
+
+			const input = document.getElementById("inputbox");
+
+			input.focus();
+
+			input.addEventListener("keyup", ({key}) => {
+				if (key === "Enter" && input.value !== "") {
+					runCommand(input.value)
+				};
+			});
+
+			function print(text) {
+				document.getElementById("consoletest").innerHTML += text;
+			};
+
+			function runCommand(command) {
+				input.value = "";
+				document.getElementById("consoletest").innerHTML = "";
+				cmd = command.split(" ")[0];
+				arg = command.split(" ")[1];
+				const commands = [
+				"help: see this list",
+				"eval: run code", "home: homepage",
+				"dir: pages on this site",
+				"socials: links to my socials and stuff"
+				];
+				if (cmd === "help") { print(commands.toString().replaceAll(",", "<br>")); }
+				else if (cmd === "eval") { function evalthing() { try { eval(arg); } catch (e) { return e.message; }; }; print(`ran js:<br>${arg}<br><br>output:<br>` + evalthing()); }
+				else if (cmd === "home") { print("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter"); }
+				else if (cmd === "dir") { print('dir<br><br><a class="navlink hoverthing popoutthing" href="games.html">games</a><br><a class="navlink hoverthing popoutthing" href="updatelogs.html">updates</a><br>') }
+				else if (cmd === "socials") { print('<a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://discord.gg/zhgVeJeKVR">discord</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT2">twitter</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT3">twitter backup</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://github.com/maxxusx">github</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://forum.wearedevs.net/profile?uid=108982">wearedevs</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://v3rmillion.net/member.php?action=profile&uid=3082408">v3rmillion</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://www.roblox.com/users/1056542255/profile">roblox</a>'); }
+				else { print("command not found<br><br>" + commands.toString().replaceAll(",", "<br>")); };
+			};
+		</script>
+		<script>
+			// changes version num at top of page
+			document.getElementById("version").innerHTML = "mxs terminal [" + updates[0].version + "]"
+		</script>
+		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "749939e3193f404482d44493b21b2c99"}'></script><!-- End Cloudflare Web Analytics -->
 	</body>
 </html>

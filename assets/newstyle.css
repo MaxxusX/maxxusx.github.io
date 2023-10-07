@@ -6,25 +6,30 @@
 
 @font-face {
 	font-family: pixel nes;
-	src: url(fonts/Pixel_NESd41d.eot?) format("eot"),url(fonts/Pixel_NES.woff) format("woff"),url(fonts/Pixel_NES.ttf) format("truetype"),url(fonts/Pixel_NES.html#PixelNES) format("svg");
+	src: url(fonts/Pixel_NESd41d.eot?) format("eot"), url(fonts/Pixel_NES.woff) format("woff"), url(fonts/Pixel_NES.ttf) format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family:nec_apc3;src:url(fonts/Web437_NEC_APC3_8x16.woff) format("woff");font-weight:400;font-style:normal;
+	font-family: nec_apc3;
+	src: url(fonts/Web437_NEC_APC3_8x16.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-	font-family:nec_apc3;src:url(fonts/Web437_Nix8810_M16.woff) format("woff");font-weight:700;font-style:normal;
+	font-family: nec_apc3;
+	src: url(fonts/Web437_Nix8810_M16.woff) format("woff");
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-	font-family:russiangothic;src:local("Arial");font-weight:400;font-style:normal;unicode-range:U+0420-42FF;
-}
-
-@font-face {
-	font-family:digital;src:url(fonts/Digital-7d41d.ttf?) format("truetype");font-weight:400;font-style:normal;
+	font-family: unifont;
+	src: url(fonts/unifont.otf) format("opentype");
+	font-weight: 900;
+	font-style: normal;
 }
 
 body {
@@ -35,12 +40,15 @@ body {
 	padding: 0, 50px;
 	margin-left: 50px;
 	margin-right: 50px;
-	padding-top: 25px;
+	margin-top: 25px;
 	image-rendering: pixelated;
-	font-family: "Twemoji",russiangothic,ms ui gothic,nec_apc3,Tahoma;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
 	background-color: #000;
-	font-smooth: never;
-	-webkit-font-smoothing: none;	
+	-webkit-font-smoothing: none;
+}
+
+.consoleaot {
+	font-size: 15px;
 }
 
 :root {
@@ -77,13 +85,13 @@ a {
 
 #bigtd {
 	max-width: 1350px;
-	width: 1350px;/*675px*/
+	width: 1350px;
 	vertical-align: baseline;
 	margin: auto;
 }
 
 #td {
-	width: 450px;/*225px*/
+	width: 450px;
 	vertical-align: baseline;
 	margin: auto;
 }
@@ -93,7 +101,7 @@ a {
 	border: 2px solid #383838;
 	border-radius: 0px;
 	color: #fff;
-	padding: 0 15px;
+	padding: 15px 15px;
 	margin: 5px;
 }
 
@@ -115,7 +123,7 @@ textarea {
 	background-color: #000;
 	color: #fff;
 	border: 1px solid #383838;
-	font-family: "Twemoji", MS Gothic,monospace;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
 	resize: none;
 	padding: 5px;
 	margin: 0;
@@ -123,19 +131,21 @@ textarea {
 	max-width: 1285px;
 	width: 1285px;
 	display: inline;
+	cursor: url('cursor.png') 15 15, auto;
 }
 
 input {
 	background-color: #000;
 	color: #fff;
 	border: 1px solid #383838;
-	font-family: "Twemoji", MS Gothic,monospace;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
 	resize: none;
 	padding: 5px;
 	margin: 0;
 	font-size: 20px;
+	width: 100%;
 	max-width: 1285px;
-	width: 1285px;
+	cursor: url('cursor.png') 15 15, auto;
 	display: inline;
 }
 
@@ -183,10 +193,11 @@ marquee {
 }
 
 .hoverthing:hover:after {
-	content:' <';
+	content: ' <';
 }
-.hoverthing:hover:before {
-	content:'> ';
+
+.hoverthing {
+	color: green;
 }
 
 .nodecor:hover {
@@ -197,4 +208,9 @@ marquee {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-weight: bold;
+	font-size: larger;
+}
+
+#consoletest {
+	min-height: 10em;
 }
