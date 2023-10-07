@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preload" href="assets/newstyle.css" as="style">
+		<link rel="preload" href="assets/style.css" as="style">
 		<script src="assets/universal.js"></script>
 		<title>maxxus' site</title>
-		<link rel="stylesheet" href="assets/newstyle.css">
+		<link rel="stylesheet" href="assets/style.css">
 		<link rel="icon" href="assets/favicon.png">
 		<script src="updates.js"></script><!-- get versions for version number -->
 	</head>
@@ -31,9 +31,32 @@
 		<footer>
 			<span id="splash"></span>
 			<script src="assets/splash.js"></script>
+			<br><br>
+			<span>cool sites</span>
+			<br><br><br>
+			<div class="websites">
+				<a class="pfp" href="https://alper.boo" target="_blank" alt="alper's site"><img class="pfpimg" src="assets/images/alper.png"></a>
+				<a class="pfp" href="https://mstudio45.com" target="_blank" alt="mstudio's site"><img class="pfpimg" src="assets/images/mstudio.png"></a>
+				<a class="pfp" href="https://upio.dev" target="_blank" alt="upio's site"><img class="pfpimg" src="assets/images/upio.png"></a>
+				<a class="pfp" href="https://fishlock.boo" target="_blank" alt="fishlock's site"><img class="pfpimg" src="assets/images/fishlock.png"></a>
+				<a class="pfp" href="https://lolcat.boo" target="_blank" alt="lolcat's site"><img class="pfpimg" src="assets/images/lolcat.png"></a>
+				<a class="pfp" href="https://ryos.lol" target="_blank" alt="electrons's site"><img class="pfpimg" src="assets/images/electron.png"></a>
+			<div>
+			<br><br>
+			<span>NOT cool sites</span>
+			<br><br><br>
+			<div class="websites">
+				<a class="pfp" href="https://aza.pingwinco.xyz" target="_blank" alt="aza's site"><img class="pfpimg" src="https://cdn.discordapp.com/icons/1153384035259777124/83429aaeac0dee264821874569fd8450.png?size=2048"></a>
+			<div>
 		</footer>
 		<script> // console code
 			// use <br> for new lines
+			
+			const homeText = "funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter<br><br>happy birthday, alper!"
+
+			function print(text) {
+				document.getElementById("consoletest").innerHTML += text;
+			};
 
 			function slowPrint(message, index) {
 				let msg = message.replaceAll("<br>", "↳")
@@ -51,7 +74,7 @@
 
 			//sleep(500).then(() => { slowPrint("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter", 0); });
 
-			print("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter");
+			print(homeText);
 
 			const input = document.getElementById("inputbox");
 
@@ -62,10 +85,6 @@
 					runCommand(input.value)
 				};
 			});
-
-			function print(text) {
-				document.getElementById("consoletest").innerHTML += text;
-			};
 
 			function runCommand(command) {
 				input.value = "";
@@ -80,7 +99,7 @@
 				];
 				if (cmd === "help") { print(commands.toString().replaceAll(",", "<br>")); }
 				else if (cmd === "eval") { function evalthing() { try { eval(arg); } catch (e) { return e.message; }; }; print(`ran js:<br>${arg}<br><br>output:<br>` + evalthing()); }
-				else if (cmd === "home") { print("funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter"); }
+				else if (cmd === "home") { print(homeText); }
 				else if (cmd === "dir") { print('dir<br><br><a class="navlink hoverthing popoutthing" href="games.html">games</a><br><a class="navlink hoverthing popoutthing" href="updatelogs.html">updates</a><br>') }
 				else if (cmd === "socials") { print('<a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://discord.gg/zhgVeJeKVR">discord</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT2">twitter</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT3">twitter backup</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://github.com/maxxusx">github</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://forum.wearedevs.net/profile?uid=108982">wearedevs</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://v3rmillion.net/member.php?action=profile&uid=3082408">v3rmillion</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://www.roblox.com/users/1056542255/profile">roblox</a>'); }
 				else { print("command not found<br><br>" + commands.toString().replaceAll(",", "<br>")); };

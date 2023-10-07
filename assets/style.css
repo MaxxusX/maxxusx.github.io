@@ -1,30 +1,35 @@
 @font-face {
 	font-family: "Twemoji";
 	src: url(fonts/Twemoji.ttf) format("truetype");
-	unicode-range: U+00A9, U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
+	unicode-range: U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
 }
 
 @font-face {
 	font-family: pixel nes;
-	src: url(fonts/Pixel_NESd41d.eot?) format("eot"),url(fonts/Pixel_NES.woff) format("woff"),url(fonts/Pixel_NES.ttf) format("truetype"),url(fonts/Pixel_NES.html#PixelNES) format("svg");
+	src: url(fonts/Pixel_NESd41d.eot?) format("eot"), url(fonts/Pixel_NES.woff) format("woff"), url(fonts/Pixel_NES.ttf) format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family:nec_apc3;src:url(fonts/Web437_NEC_APC3_8x16.woff) format("woff");font-weight:400;font-style:normal;
+	font-family: nec_apc3;
+	src: url(fonts/Web437_NEC_APC3_8x16.woff) format("woff");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-	font-family:nec_apc3;src:url(fonts/Web437_Nix8810_M16.woff) format("woff");font-weight:700;font-style:normal;
+	font-family: nec_apc3;
+	src: url(fonts/Web437_Nix8810_M16.woff) format("woff");
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-	font-family:russiangothic;src:local("Arial");font-weight:400;font-style:normal;unicode-range:U+0420-42FF;
-}
-
-@font-face {
-	font-family:digital;src:url(fonts/Digital-7d41d.ttf?) format("truetype");font-weight:400;font-style:normal;
+	font-family: unifont;
+	src: url(fonts/unifont.otf) format("opentype");
+	font-weight: 900;
+	font-style: normal;
 }
 
 body {
@@ -36,99 +41,42 @@ body {
 	padding: 0, 50px;
 	margin-left: 50px;
 	margin-right: 50px;
+	margin-top: 25px;
+	image-rendering: pixelated;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
+	background-color: #000;
+	-webkit-font-smoothing: none;
+}
+
+.consoleaot {
+	font-size: 15px;
 }
 
 :root {
 	cursor: url('cursor.png') 15 15, auto;
-	--body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #00ffab45;
-	--green-text-shadow: 0 0 20px #08bd9882;
-	--letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
-	--firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
-	--firefox-green-shadow: 0 0 20px #08bd994f;
-}
-
-body,#debug {
-	image-rendering: pixelated;
-	font-family: "Twemoji",russiangothic,ms ui gothic,nec_apc3,Tahoma;
-	background-color: #000;
-	text-shadow: var(--body-text-shadow);
-	font-smooth: never;
-	-webkit-font-smoothing: none;
 }
 
 h1 {
-	color: #2c902c;
+	color: green;
 	font-family: "Twemoji", pixel nes;
 	margin: 0;
-	text-shadow: var(--green-text-shadow);
 	font-size: 40px;
 }
 
 h2 {
-	color: #2c902c;
+	color: green;
 	font-family: "Twemoji", pixel nes;
 	margin: 0;
-	text-shadow: var(--green-text-shadow);
 	font-size: 30px;
 }
 
 a {
-	cursor: url('cursor.png') 15 15, auto;
 	text-decoration: none;
-	color: #2c902c;
-	text-shadow: var(--green-text-shadow);
+	color: green;
+	cursor: url('cursor.png') 15 15, auto;
 }
 
-@media screen and (min-width:601px) {
-@supports(-moz-appearance:none) {
-		body{text-shadow: var(--firefox-body-shadow)!important;
-	}
-
-	h2 {
-		text-shadow: var(--firefox-green-shadow)!important;
-	}
-
-	a {
-		text-shadow: var(--firefox-green-shadow)!important;
-	}
-}
-
-body:before {
-	content: "";
-	position: fixed;
-	opacity: .2;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	z-index: 1000;
-	background-image: url(images/overlay.png);
-	background-repeat: all;
-	background-position: 0 0;
-	animation-name: Static;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps(4);
-	box-shadow: inset 0 0 10em rgb(0 0 0/40%);
-}
-
-body:after {
-	content: "";
-	position: fixed;
-	left: 0;
-	top: 0;
-	opacity: .5;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	z-index: 1000;
-	background-image: url(images/overlay2.png);
-	background-repeat: all;
-	background-position: 0 0;
-}}
-
-#container,#backside-container {
+#container {
 	max-width: 1800px;
 	margin: 0 auto;
 	display: grid;
@@ -137,21 +85,15 @@ body:after {
 	justify-content: center;
 }
 
-#logo {
-	text-align: center;
-	padding-top: 5px;
-	margin-right: 50px;
-}
-
-#maintd {
+#bigtd {
 	max-width: 1350px;
-	width: 1350px;/*675px*/
+	width: 1350px;
 	vertical-align: baseline;
 	margin: auto;
 }
 
-#menutd {
-	width: 450px;/*225px*/
+#td {
+	width: 450px;
 	vertical-align: baseline;
 	margin: auto;
 }
@@ -176,7 +118,7 @@ a:hover {
 	cursor: url('cursor.png') 15 15, auto;
 }
 
-.centerbox {
+.center {
 	text-align: center;
 }
 
@@ -184,33 +126,34 @@ textarea {
 	background-color: #000;
 	color: #fff;
 	border: 1px solid #383838;
-	font-family: "Twemoji", MS Gothic,monospace;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
 	resize: none;
+	padding: 5px;
+	margin: 0;
+	font-size: 20px;
+	max-width: 1285px;
+	width: 1285px;
+	display: inline;
 	cursor: url('cursor.png') 15 15, auto;
 }
 
-::-webkit-scrollbar {
-	width: 3px;
-}
-
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(70,70,70,.479);
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #1f1f1f;
-	outline: 1px solid #1a503b;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #1f1f1f;
-	outline: 1px solid #297c5c;
-}
-
-.logo {
+input {
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #383838;
+	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
+	resize: none;
+	padding: 5px;
+	margin: 0;
+	font-size: 20px;
+	width: 100%;
+	max-width: 1285px;
+	cursor: url('cursor.png') 15 15, auto;
 	display: inline;
-	height: 60px;
-	filter: var(--letter-shadow);
+}
+
+::-webkit-scrollbar {
+	width: 0;
 }
 
 footer {
@@ -225,26 +168,15 @@ h3 {
 
 p {
 	font-size: 20px;
+	margin: 0;
 }
 
 li {
 	font-size: 18px;
 }
 
-#maxxuspfp {
-	float: left;
-	border: 0px solid #297c5c;
-	margin: 10px 10px 5px 5px;
-	width: 150px;
-	height: 150px;
-}
-
 iframe {
 	z-index: 5000;
-}
-
-#splash {
-	font-size: 16px;
 }
 
 #meme {
@@ -252,7 +184,6 @@ iframe {
 	min-width: 150px;
 	max-width: 250px;
 	max-height: 300px;
-	filter: var(--letter-shadow);
 }
 
 marquee {
@@ -265,18 +196,53 @@ marquee {
 }
 
 .hoverthing:hover:after {
-	content:' <';
+	content: ' <';
 }
-.hoverthing:hover:before {
-	content:'> ';
+
+.hoverthing {
+	color: green;
 }
 
 .nodecor:hover {
 	text-decoration: none;
 }
 
+.popoutthing {
+	padding-left: 5px;
+	transition: transform .2s;
+}
+
 .popoutthing:hover {
 	padding-top: 5px;
 	padding-bottom: 5px;
-	font-weight: bold;
+	font-weight: 500;
+	transform: scale(1.25);
+}
+
+#consoletest {
+	min-height: 10em;
+}
+
+.pfp {
+	width: 64px;
+	height: 64px;
+	margin: 6px;
+}
+
+.pfpimg {
+	width: 64px;
+	height: 64px;
+	transition: transform .2s;
+	border-radius: 30%;
+	margin: 6px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.pfpimg:hover {
+	transform: scale(1.30);
+}
+
+.websites {
+	padding-bottom: 25px;
 }
