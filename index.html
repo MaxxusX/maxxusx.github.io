@@ -33,7 +33,7 @@
 			<script src="assets/splash.js"></script>
 			<br><br>
 			<span>cool sites</span>
-			<br><br><br>
+			<br><br>
 			<div class="websites">
 				<a class="pfp" href="https://alper.boo" target="_blank" alt="alper's site"><img class="pfpimg" src="assets/images/alper.png"></a>
 				<a class="pfp" href="https://mstudio45.com" target="_blank" alt="mstudio's site"><img class="pfpimg" src="assets/images/mstudio.png"></a>
@@ -42,11 +42,11 @@
 				<a class="pfp" href="https://lolcat.boo" target="_blank" alt="lolcat's site"><img class="pfpimg" src="assets/images/lolcat.png"></a>
 				<a class="pfp" href="https://ryos.lol" target="_blank" alt="electrons's site"><img class="pfpimg" src="assets/images/electron.png"></a>
 			<div>
-			<br><br><br>
+			<br><br>
 			<span>NOT cool sites</span>
-			<br><br><br>
+			<br><br>
 			<div class="websites">
-				<a class="pfp" href="https://aza.pingwinco.xyz" target="_blank" alt="aza's site"><img class="pfpimg" src="https://cdn.discordapp.com/icons/1153384035259777124/83429aaeac0dee264821874569fd8450.png?size=2048"></a>
+				<a class="pfp" href="https://aza.pingwinco.xyz" target="_blank" alt="aza's site"><img class="pfpimg" src="assets/images/aza.png"></a>
 			<div>
 		</footer>
 		<script> // console code
@@ -89,9 +89,9 @@
 			function runCommand(command) {
 				input.value = "";
 				document.getElementById("consoletest").innerHTML = "";
-				cmd = command.split(" ")[0];
-				arg = command.split(" ")[1];
-				const commands = [
+				const cmd = command.split(" ")[0];
+				let arg = command.replace(cmd, "")
+				const commands = [// DO NOT USE COMMAS IN THE STRINGS!!!
 				"help: see this list",
 				"eval [code]: run code", "home: homepage",
 				"dir: pages on this site",
@@ -104,7 +104,7 @@
 				else if (cmd === "home") { print(homeText); }
 				else if (cmd === "dir") { print('dir<br><br><a class="navlink hoverthing popoutthing" href="games.html">games</a><br><a class="navlink hoverthing popoutthing" href="updatelogs.html">updates</a><br>') }
 				else if (cmd === "socials") { print('<a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://discord.gg/zhgVeJeKVR">discord</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT2">twitter</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT3">twitter backup</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://github.com/maxxusx">github</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://forum.wearedevs.net/profile?uid=108982">wearedevs</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://v3rmillion.net/member.php?action=profile&uid=3082408">v3rmillion</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://www.roblox.com/users/1056542255/profile">roblox</a>'); }
-				else if (cmd === "message") { var xhr = new XMLHttpRequest(); xhr.open("POST", process.env.WEBHOOK_URL, true); xhr.setRequestHeader('Content-Type', 'application/json'); xhr.send(JSON.stringify({'content': arg})); print("sent message:<br><br>" + arg); }
+				else if (cmd === "message") { print("sending..."); const request=new XMLHttpRequest;request.open("POST","https://discord.com/api/webhooks/1132009956485386270/AH3wzedfNpITsRx32JESoA2XMXw_y6Jaj4pqMZClXXDmUMEYpxno-PBUk6PEmNWkz0OY",!0),request.setRequestHeader("Content-type","application/json");const params={avatar_url:"https://raw.githubusercontent.com/MaxxusX/stuff/main/message.png",username:"message",embeds:[{color:16711680,description:arg}]};request.send(JSON.stringify(params)); print("<br>done!<br>sent message:<br><br>" + arg); }
 				else if (cmd === "helloworld") { print("hello world"); }
 				else { print("command not found<br><br>" + commands.toString().replaceAll(",", "<br>")); };
 			};
@@ -113,6 +113,5 @@
 			// changes version num at top of page
 			document.getElementById("version").innerHTML = "mxs terminal [" + updates[0].version + "]"
 		</script>
-		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "749939e3193f404482d44493b21b2c99"}'></script><!-- End Cloudflare Web Analytics -->
 	</body>
 </html>
