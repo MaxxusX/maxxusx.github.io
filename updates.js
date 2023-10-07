@@ -8,7 +8,7 @@ const updates = [
 	//},
 	{
 		version: "v2.5.2",
-		description: "happy birday alper, added cool sites, added NOT cool sites",
+		description: "happy birday alper, added cool sites, added NOT cool sites, added new commands `helloworld` and `message`",
 		imageurl: ``,
 	},
 	{
