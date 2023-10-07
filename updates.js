@@ -7,8 +7,8 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
-		version: "v2.5-terminal",
-		description: "some little stuff, started work on the terminal style",
+		version: "v2.5",
+		description: "some little stuff, started work on the terminal style, added termial lmao uh yeah thats pretty much it",
 		imageurl: ``,
 	},
 	{
