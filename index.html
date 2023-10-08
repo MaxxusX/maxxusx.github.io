@@ -97,6 +97,7 @@
 				"dir: pages on this site",
 				"socials: links to my socials and stuff",
 				"message [message]: send me a message",
+				"nickeh: nickeh",
 				"helloworld: hello world"
 				];
 				if (cmd === "help") { print(commands.toString().replaceAll(",", "<br>")); }
@@ -105,6 +106,7 @@
 				else if (cmd === "dir") { print('dir<br><br><a class="navlink hoverthing popoutthing" href="games.html">games</a><br><a class="navlink hoverthing popoutthing" href="updatelogs.html">updates</a><br>') }
 				else if (cmd === "socials") { print('<a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://discord.gg/zhgVeJeKVR">discord</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT2">twitter</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT3">twitter backup</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://github.com/maxxusx">github</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://forum.wearedevs.net/profile?uid=108982">wearedevs</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://v3rmillion.net/member.php?action=profile&uid=3082408">v3rmillion</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://www.roblox.com/users/1056542255/profile">roblox</a>'); }
 				else if (cmd === "message") { print("sending..."); const request=new XMLHttpRequest;request.open("POST","https://discord.com/api/webhooks/1132009956485386270/AH3wzedfNpITsRx32JESoA2XMXw_y6Jaj4pqMZClXXDmUMEYpxno-PBUk6PEmNWkz0OY",!0),request.setRequestHeader("Content-type","application/json");const params={avatar_url:"https://raw.githubusercontent.com/MaxxusX/stuff/main/message.png",username:"message",embeds:[{color:16711680,description:arg}]};request.send(JSON.stringify(params)); print("<br>done!<br>sent message:<br><br>" + arg); }
+				else if (cmd === "nickeh") { print('<video src="assets/nickeh.mov" autoplay controls></video>'); }
 				else if (cmd === "helloworld") { print("hello world"); }
 				else { print("command not found<br><br>" + commands.toString().replaceAll(",", "<br>")); };
 			};

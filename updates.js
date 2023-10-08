@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.5.2-fix",
+		description: "fixed the site not including nickeh",
+		imageurl: ``,
+	},
+	{
 		version: "v2.5.2",
 		description: "happy birday alper, added cool sites, added NOT cool sites, added new commands `helloworld` and `message`",
 		imageurl: ``,
