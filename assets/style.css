@@ -199,6 +199,10 @@ marquee {
 	content: ' <';
 }
 
+.hoverthingleft:hover:before {
+	content: '> ';
+}
+
 .hoverthing {
 	color: green;
 }
@@ -245,4 +249,9 @@ marquee {
 
 .websites {
 	padding-bottom: 25px;
+}
+
+.gamedesc {
+	font-size:15px;
+	margin-top: 8px;
 }
