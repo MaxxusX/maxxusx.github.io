@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="assets/style.css" as="style">
+		<script src="assets/universal.js"></script>
+		<title>maxxus' site</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="icon" href="assets/favicon.png">
+		<script src="updates.js"></script><!-- get versions for version number -->
+	</head>
+	<body>
+		<h1 class="center">mxs</h1>
+		<div id="container">
+			<table>
+				<td id="bigtd">
+					<div class="box">
+						<p id="version" class="consoleaot"></p>
+						<p class="consoleaot">© 2023 Maxxus. All rights reserved.</p>
+						<br>
+						<div id="consoletest"></div>
+						<br>
+						<input wrap="off" placeholder="help" type="text" id="inputbox" name="inputbox" maxlength=120 spellcheck=false></input>
+					</div>
+				</td>
+			</table>
+			<br>
+		</div>
+		<footer>
+			<span id="splash"></span>
+			<script src="assets/splash.js"></script>
+			<br><br>
+			<span>cool sites</span>
+			<br><br>
+			<div class="websites">
+				<a class="pfp" href="https://alper.boo" target="_blank" alt="alper's site"><img class="pfpimg" src="assets/images/alper.png"></a>
+				<a class="pfp" href="https://mstudio45.com" target="_blank" alt="mstudio's site"><img class="pfpimg" src="assets/images/mstudio.png"></a>
+				<a class="pfp" href="https://upio.dev" target="_blank" alt="upio's site"><img class="pfpimg" src="assets/images/upio.png"></a>
+				<a class="pfp" href="https://fishlock.boo" target="_blank" alt="fishlock's site"><img class="pfpimg" src="assets/images/fishlock.png"></a>
+				<a class="pfp" href="https://lolcat.boo" target="_blank" alt="lolcat's site"><img class="pfpimg" src="assets/images/lolcat.png"></a>
+				<a class="pfp" href="https://ryos.lol" target="_blank" alt="electrons's site"><img class="pfpimg" src="assets/images/electron.png"></a>
+			<div>
+			<br><br>
+			<span>NOT cool sites</span>
+			<br><br>
+			<div class="websites">
+				<a class="pfp" href="https://aza.pingwinco.xyz" target="_blank" alt="aza's site"><img class="pfpimg" src="assets/images/aza.png"></a>
+			<div>
+		</footer>
+		<script> // console code
+			// use <br> for new lines
+			
+			// to do: make command that embeds https://cat-bounce.com/
+			const homeText = 'funny little website!!!!<br>i code stuff.<br><br><br>antifur<br>luau pro<br>antiP2W<br>lego game exploiter<br>lego game scripter<br><br>fuck synapse, you too scriptware<br>praying <a class="navlink" target="_blank" rel="noopener" href="https://ryos.lol">electron</a> v3 will save us'
+
+			function print(text) {
+				document.getElementById("consoletest").innerHTML += text;
+			};
+
+			print(homeText);
+
+			const input = document.getElementById("inputbox");
+
+			input.focus();
+
+			input.addEventListener("keyup", ({key}) => {
+				if (key === "Enter" && input.value !== "") {
+					runCommand(input.value)
+				};
+			});
+
+			function runCommand(command) {
+				input.value = "";
+				document.getElementById("consoletest").innerHTML = "";
+				const cmd = command.split(" ")[0];
+				let arg = command.replace(cmd, "")
+				const commands = [// DO NOT USE COMMAS IN THE STRINGS!!!
+				"help: see this list",
+				"eval [code]: run code", "home: homepage",
+				"dir: pages on this site",
+				"socials: links to my socials and stuff",
+				"message [message]: send me a message",
+				"nickeh: nickeh",
+				"gaming: subway surfers",
+				"helloworld: hello world"
+				];
+				if (cmd === "help") { print(commands.toString().replaceAll(",", "<br>")); }
+				else if (cmd === "eval") { function evalthing() { try { eval(arg); } catch (e) { return e.message; }; }; print(`ran js:<br>${arg}<br><br>output:<br>` + evalthing()); }
+				else if (cmd === "home") { print(homeText); }
+				else if (cmd === "dir") { print('dir<br><br><a class="navlink hoverthing popoutthing" href="games.html">games</a><br><a class="navlink hoverthing popoutthing" href="updatelogs.html">updates</a><br>') }
+				else if (cmd === "socials") { print('<a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://discord.gg/zhgVeJeKVR">discord</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT2">twitter</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://twitter.com/MaxxusYT3">twitter backup</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://github.com/maxxusx">github</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://forum.wearedevs.net/profile?uid=108982">wearedevs</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://v3rmillion.net/member.php?action=profile&uid=3082408">v3rmillion</a><br><a class="navlink hoverthing popoutthing" target="_blank" rel="noopener" href="https://www.roblox.com/users/1056542255/profile">roblox</a>'); }
+				else if (cmd === "message") { print("sending..."); const request=new XMLHttpRequest;request.open("POST","https://discord.com/api/webhooks/1132009956485386270/AH3wzedfNpITsRx32JESoA2XMXw_y6Jaj4pqMZClXXDmUMEYpxno-PBUk6PEmNWkz0OY",!0),request.setRequestHeader("Content-type","application/json");const params={avatar_url:"https://raw.githubusercontent.com/MaxxusX/stuff/main/message.png",username:"message",embeds:[{color:16711680,description:arg}]};request.send(JSON.stringify(params)); print("<br>done!<br>sent message:<br><br>" + arg); }
+				else if (cmd === "nickeh") { print('<video src="assets/nickeh.mov" autoplay controls></video>'); }
+				else if (cmd === "gaming") { print('<img src="assets/images/subway surfers.gif" alt="subway surfers"></img>'); }
+				else if (cmd === "helloworld") { print("hello world"); }
+				else if (cmd === "afgeneral") { print('=====================<br>Dropped by: Hero<br>=====================<br>Reason: zoophile, pedophile, backstabber, sending zoophile porn to minors after being exposed for being a backstabber...<br>=====================<br>Name: Gavin Wilson<br>=====================<br>Address: 4530 Osprey Run Ct,<br>City: Denver<br>State: North Carolina<br>Country: USA<br>Continent: North America<br>=====================<br>Twitter: <a class="pfp" rel="nofollow" href="https://twitter.com/GrandeurAttache" target="_blank">@GrandeurAttache</a><br>Other Twitter: <a class="pfp" rel="nofollow" href="https://twitter.com/AG_Zhark" target="_blank">@AG_Zhark</a> (sussed (too ez chat))<br>Telegram: <a class="pfp" rel="nofollow" href="https://t.me/AG_Zhark" target="_blank">https://t.me/AG_Zhark</a>'); }
+				else { print("command not found<br><br>" + commands.toString().replaceAll(",", "<br>")); };
+			};
+		</script>
+		<script>
+			// changes version num at top of page
+			document.getElementById("version").innerHTML = "mxs terminal [" + updates[0].version + "]"
+		</script>
+	</body>
+</html>
