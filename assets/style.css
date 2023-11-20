@@ -265,3 +265,11 @@ marquee {
 	vertical-align: baseline;
 	margin: auto;
 }
+
+.margin10 {
+	margin-top: 10px;
+}
+
+.inlineelement {
+	display: inline;
+}
