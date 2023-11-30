@@ -7,6 +7,11 @@ const updates = [
 	//	imageurl: `${pics}/v1.5.png`,
 	//},
 	{
+		version: "v2.5.9.6",
+		description: "fix li on firefox",
+		imageurl: ``,
+	},
+	{
 		version: "v2.5.9.5",
 		description: "stuff",
 		imageurl: ``,
