@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="universal.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="assets/newstyle.css" as="style">
+		<script src="assets/universal.js"></script>
 		<title>maxxus // encoder</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/newstyle.css">
+		<link rel="icon" href="assets/favicon.png">
 	</head>
-	<body style="background-color:#011a2a;z-index:15;position:sticky;overflow:hidden;position:absolute;margin:auto;" id="mainbody">
-		<div id="divmain" style="padding:200px;padding-bottom:0px;overflow:hidden;">
+	<body>
+		<span>
 			<form>
-				<label style="color:#ececec;" for="texttoencode">input:</label><br>
-				<textarea style="width:65em; height:200px; color:#ececec; background-color:#000000; font-family:Montserrat; font-weight:300; font-size:medium; resize:none; border-radius:5px; overflow:hidden; border-style:solid; margin-bottom:10px;" spellcheck="true" type="text" id="texttoencode" name="texttoencode"></textarea><br>
+				<label for="inputbox">input:</label>
+				<br>
+				<textarea spellcheck="true" type="text" id="inputbox" name="inputbox"></textarea><br>
 				<label style="color:#ececec;" for="outputbox">output:</label><br>
-				<textarea style="width:65em; height:200px; color:#ececec; background-color:#000000; font-family:Montserrat; font-weight:300; font-size:medium; resize:none; border-radius:5px; overflow:hidden; border-style:solid;" spellcheck="false" type="text" id="outputbox" name="outputbox"></textarea>
+				<textarea spellcheck="false" type="text" id="outputbox" name="outputbox"></textarea>
 			</form>
 
-			<button class="sendbtn" type="button" onclick="encodestuff()">encode</button>
+			<button type="button" onclick="encodestuff()">encode</button>
+			<button type="button" onclick="decodestuff()">decode</button>
 
 			<script>
 				// make encoding/decoding functions and stuff
@@ -61,7 +63,7 @@
 
 				function encodeBin(str) {
 					return str.split('').map(function (char) {
-    				    return char.charCodeAt(0).toString(2);
+						return char.charCodeAt(0).toString(2);
 					}).join(' ');
 				};
 				function decodeBin(str) {
@@ -81,11 +83,16 @@
 				};
 				// now actually encode/decode
 				function encodestuff() {
-					var inputbox = document.getElementById("texttoencode");
+					var inputbox = document.getElementById("inputbox");
 					var outputbox = document.getElementById("outputbox")
 					outputbox.value = encode(inputbox.value);
 				};
+				function decodestuff() {
+					var inputbox = document.getElementById("inputbox");
+					var outputbox = document.getElementById("outputbox")
+					outputbox.value = decode(inputbox.value);
+				};
 			</script>
-		</div>
+		</span>
 	</body>
 </html>

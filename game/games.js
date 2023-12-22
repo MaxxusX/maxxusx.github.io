@@ -36,7 +36,7 @@ const data = [
 	{
         name: "Invaders",
 		id: "invaders",
-        description: "BROKEN -- WILLFIX",
+        description: "shoot alien things",
         link: "game/invaders.html",
 		devices: "PC",
 		unblocked: "yes",

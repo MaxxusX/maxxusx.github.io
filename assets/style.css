@@ -1,194 +1,165 @@
 @font-face {
 	font-family: "Twemoji";
-	src: url(fonts/Twemoji.ttf) format("truetype");
+	src: url(/assets/fonts/Twemoji.ttf) format("truetype");
 	unicode-range: U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
-}
-
-@font-face {
-	font-family: pixel nes;
-	src: url(fonts/Pixel_NESd41d.eot?) format("eot"), url(fonts/Pixel_NES.woff) format("woff"), url(fonts/Pixel_NES.ttf) format("truetype");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: nec_apc3;
-	src: url(fonts/Web437_NEC_APC3_8x16.woff) format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: nec_apc3;
-	src: url(fonts/Web437_Nix8810_M16.woff) format("woff");
-	font-weight: 700;
-	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: unifont;
-	src: url(fonts/unifont.otf) format("opentype");
+	src: url(/assets/fonts/unifont.otf) format("opentype");
 	font-weight: 900;
 	font-style: normal;
+	font-display: swap;
 }
 
-body {
-	cursor: url('cursor.png') 15 15, auto;
-	overflow-x: hidden;
-	margin: 0;
-	margin-top: 10px;
-	font-size: 19px;
-	padding: 0, 50px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-top: 25px;
-	image-rendering: pixelated;
-	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
-	background-color: #000;
-	-webkit-font-smoothing: none;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.consoleaot {
-	font-size: 15px;
+* {
+	cursor: url('/assets/images/cursor.png') 15 15, auto;
 }
 
 :root {
-	cursor: url('cursor.png') 15 15, auto;
+	background-color: black;
+	font-family: "Twemoji", Calibri;
+}
+
+::-webkit-scrollbar {
+	width: 0; /* hide scrollbar */
+}
+
+body {
+	background-color: black;
+	overflow-x: hidden;
+	margin: 0;
+	font-size: 3vmin;
+	padding: 0;
+	margin-top: 5vmin;
+	margin-left: 8vmin;
+	margin-right: 8vmin;
+	animation: fadeIn 1.5s;
 }
 
 h1 {
-	color: green;
-	font-family: "Twemoji", pixel nes;
+	color: white;
 	margin: 0;
-	font-size: 40px;
+	font-size: 6vmin;
 }
 
 h2 {
-	color: green;
-	font-family: "Twemoji", pixel nes;
+	color: white;
 	margin: 0;
-	font-size: 30px;
+	font-size: 5vmin;
+}
+
+h3 {
+	color: white;
+	margin: 0;
+	font-size: 4vmin;
+}
+
+h4 {
+	color: white;
+	margin: 0;
+	font-size: 2.6vmin;
+}
+
+p {
+	color: white;
+	font-size: 3vmin;
+	margin: 0;
+	font-family: "Twemoji", unifont, Tahoma;
+}
+
+b {
+	color: white;
+	font-size: 3vmin;
+	margin: 0;
+	font-family: "Twemoji", unifont, Tahoma;
 }
 
 a {
+	color: blue;
 	text-decoration: none;
-	color: green;
-	cursor: url('cursor.png') 15 15, auto;
+	font-size: 3vmin;
+	margin: 0;
 }
-
-#container {
-	max-width: 1800px;
-	margin: 0 auto;
-	display: grid;
-	align-items: center;
-	align-self: center;
-	justify-content: center;
-}
-
-#bigtd {
-	max-width: 1350px;
-	width: 1350px;
-	vertical-align: baseline;
-	margin: auto;
-}
-
-#td {
-	width: 450px;
-	vertical-align: baseline;
-	margin: auto;
-}
-
-.box {
-	background-color: #000000a8;
-	border: 2px solid #383838;
-	border-radius: 0px;
-	color: #fff;
-	padding: 15px 15px;
-	margin: 5px;
-}
-
 a:hover {
 	text-decoration: underline;
 }
 
-.navlink {
-	color: #fff;
-	display: inline-block;
-	margin-bottom: 3px;
-	cursor: url('cursor.png') 15 15, auto;
+ul {
+	padding-left: 6vmin;
 }
 
-.center {
-	text-align: center;
+li {
+	color: white;
+	font-size: 2.9vmin;
+	margin: 0;
+	padding: 0;
+	font-family: "Twemoji", Calibri;
+}
+
+label {
+	color: white;
+	font-size: 3vmin;
+	font-family: "Twemoji", unifont, Tahoma;
 }
 
 textarea {
-	background-color: #000;
-	color: #fff;
-	border: 1px solid #383838;
-	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
+	color: white;
+	font-size: 3vmin;
+	font-family: "Twemoji", unifont, Tahoma;
+	width: 120vmin;
+	height: 20vmin;
+	background-color: #000000;
 	resize: none;
-	padding: 5px;
-	margin: 0;
-	font-size: 20px;
-	max-width: 1285px;
-	width: 1285px;
-	display: inline;
-	cursor: url('cursor.png') 15 15, auto;
-}
-
-input {
-	background-color: #000;
-	color: #fff;
-	border: 1px solid #383838;
-	font-family: "Twemoji", unifont, ms ui gothic, nec_apc3, Tahoma;
-	resize: none;
-	padding: 5px;
-	margin: 0;
-	font-size: 20px;
-	width: 100%;
-	max-width: 1285px;
-	cursor: url('cursor.png') 15 15, auto;
-	display: inline;
-}
-
-::-webkit-scrollbar {
-	width: 0;
+	border-radius: 5px;
+	overflow: hidden;
+	border-style: solid;
+	margin-bottom: 4vmin;
 }
 
 footer {
 	text-align: center;
 	color: #fff;
-}
-
-h3 {
+	font-size: 2vmin;
 	margin: 0;
-	font-size: 25px;
-}
-
-p {
-	font-size: 20px;
-	margin: 0;
-}
-
-li {
-	font-size: 18px;
+	position: absolute;
+	bottom: 0.2vmin;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	font-family: "Twemoji", unifont, Tahoma;
 }
 
 iframe {
 	z-index: 5000;
 }
 
-#meme {
-	display: inline;
-	min-width: 150px;
-	max-width: 250px;
-	max-height: 280px;
+.title {
+	font-size: 8vmin;
+	margin-bottom: 3vmin;
 }
 
-marquee {
-	padding-top: 10px;
-	padding-bottom: 8px;
+.bottom {
+	position: relative;
+}
+
+.navlink {
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 0.1ch;
+}
+
+.center {
+	text-align: center;
 }
 
 .hoverthing:hover {
@@ -223,53 +194,35 @@ marquee {
 	transform: scale(1.25);
 }
 
-#consoletest {
-	min-height: 10em;
-}
-
 .pfp {
-	width: 64px;
-	height: 64px;
-	margin: 6px;
+	width: 5vmin;
+	height: 5vmin;
+	margin: 0.3vmin;
 }
 
 .pfpimg {
-	width: 64px;
-	height: 64px;
+	width: 5vmin;
+	height: 5vmin;
 	transition: transform .2s;
 	border-radius: 30%;
-	margin: 6px;
+	margin: 0.3vmin;
 	margin-left: 0;
 	margin-right: 0;
 }
-
 .pfpimg:hover {
 	transform: scale(1.30);
 }
 
-.websites {
-	padding-bottom: 25px;
-}
-
 .gamedesc {
-	font-size:15px;
-	margin-top: 8px;
+	font-size: 1.8vmin;
+	margin-top: 0.5vmin;
 }
 
-.white {
-	color: #fff;
-}
-
-#sidediv {
-	width: 225px;
-	vertical-align: baseline;
-	margin: auto;
-}
-
-.margin10 {
-	margin-top: 10px;
-}
-
-.inlineelement {
-	display: inline;
+#centerbox {
+	display: grid;
+	margin: 0 auto;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	text-align: center;
 }
