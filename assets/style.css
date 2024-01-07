@@ -1,13 +1,13 @@
 @font-face {
 	font-family: "Twemoji";
-	src: url(/assets/fonts/Twemoji.ttf) format("truetype");
+	src: url(fonts/Twemoji.ttf) format("truetype");
 	unicode-range: U+00AE, U+203C, U+2049, U+20E3, U+2122, U+2139, U+2194-2199, U+21A9-21AA, U+231A, U+231B, U+2328, U+23CF, U+23E9-23F3, U+23F8-23FA, U+24C2, U+25AA, U+25AB, U+25B6, U+25C0, U+25FB-25FE, U+2600-27EF, U+2934, U+2935, U+2B00-2BFF, U+3030, U+303D, U+3297, U+3299, U+1F000-1F02F, U+1F0A0-1F0FF, U+1F100-1F64F, U+1F680-1F6FF, U+1F910-1F96B, U+1F980-1F9E0;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: unifont;
-	src: url(/assets/fonts/unifont.otf) format("opentype");
+	src: url(fonts/unifont.otf) format("opentype");
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -23,7 +23,7 @@
 }
 
 * {
-	cursor: url('/assets/images/cursor.png') 15 15, auto;
+	cursor: url('images/cursor.webp') 15 15, auto;
 }
 
 :root {
@@ -38,8 +38,8 @@
 body {
 	background-color: black;
 	overflow-x: hidden;
+	font-size: 2vmin;
 	margin: 0;
-	font-size: 3vmin;
 	padding: 0;
 	margin-top: 5vmin;
 	margin-left: 8vmin;
@@ -73,14 +73,14 @@ h4 {
 
 p {
 	color: white;
-	font-size: 3vmin;
+	font-size: 2vmin;
 	margin: 0;
 	font-family: "Twemoji", unifont, Tahoma;
 }
 
 b {
 	color: white;
-	font-size: 3vmin;
+	font-size: 2vmin;
 	margin: 0;
 	font-family: "Twemoji", unifont, Tahoma;
 }
@@ -88,34 +88,23 @@ b {
 a {
 	color: blue;
 	text-decoration: none;
-	font-size: 3vmin;
+	font-size: 2vmin;
 	margin: 0;
+	font-family: "Twemoji", unifont, Tahoma;
 }
 a:hover {
 	text-decoration: underline;
 }
 
-ul {
-	padding-left: 6vmin;
-}
-
-li {
-	color: white;
-	font-size: 2.9vmin;
-	margin: 0;
-	padding: 0;
-	font-family: "Twemoji", Calibri;
-}
-
 label {
 	color: white;
-	font-size: 3vmin;
+	font-size: 2vmin;
 	font-family: "Twemoji", unifont, Tahoma;
 }
 
 textarea {
 	color: white;
-	font-size: 3vmin;
+	font-size: 2vmin;
 	font-family: "Twemoji", unifont, Tahoma;
 	width: 120vmin;
 	height: 20vmin;
@@ -139,59 +128,62 @@ footer {
 	font-family: "Twemoji", unifont, Tahoma;
 }
 
-iframe {
-	z-index: 5000;
+footer .mads {/* for mxs ad service */
+	background: rgb(10, 10, 10);
+	width: 728px; /* all mads are 728px wide */
+	height: 90px; /* all mads are 90px tall */
+	border: none;
 }
 
 .title {
 	font-size: 8vmin;
-	margin-bottom: 3vmin;
 }
 
-.bottom {
+.h3link {
+	color: rgb(0, 0, 255);
+	margin: 0;
+	font-size: 4vmin;
+	font-family: "Twemoji", Calibri;
+}
+
+.relative {
 	position: relative;
-}
-
-.navlink {
-	color: #fff;
-	display: inline-block;
-	margin-bottom: 0.1ch;
 }
 
 .center {
 	text-align: center;
 }
 
-.hoverthing:hover {
-	text-decoration: none;
-}
-
-.hoverthing:hover:after {
-	content: ' <';
-}
-
-.hoverthingleft:hover:before {
-	content: '> ';
+.navlink {
+	display: inline-block;
 }
 
 .hoverthing {
-	color: green;
+	color: blue;
+}
+.hoverthing:hover {
+	text-decoration: none;
+}
+.hoverthing:hover:after {
+	content: ' <';
+}
+.hoverthing:hover:before {
+	content: '> ';
+}
+
+.popoutthing {
+	transition: transform .2s;
+}
+.popoutthing:hover {
+	transform: scale(1.25);
 }
 
 .nodecor:hover {
 	text-decoration: none;
 }
 
-.popoutthing {
-	padding-left: 5px;
-	transition: transform .2s;
-}
-
-.popoutthing:hover {
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-weight: 500;
-	transform: scale(1.25);
+.calibri {
+	font-family: "Twemoji", Calibri;
 }
 
 .pfp {
@@ -225,4 +217,61 @@ iframe {
 	align-self: center;
 	justify-content: center;
 	text-align: center;
+}
+
+#games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+}
+
+.game-card {
+    width: 20vmin;
+	min-height: 20vmin;
+    border: 0.2vmin solid #333;
+    border-radius: 1vmin;
+    box-shadow: 0 0.8vmin 0.8vmin rgba(0, 0, 0, 0.2);
+    padding: 2vmin;
+    text-align: center;
+	position: relative;
+    background-color:#101010;
+    color: darkgrey;
+    transition: background-color 0.3s ease;
+}
+
+.game-title {
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+.game-desc {
+    font-size: 2vmin;
+	padding-bottom: 9vmin;
+}
+
+.play-button {
+	position: absolute;
+	bottom: 2vmin;
+	left: 3vmin;
+    background-color:blue;
+    color: #fff;
+    border: none;
+    padding: 1vmin 6vmin;
+    border-radius: 1vmin;
+    font-size: 3vmin;
+}
+
+.search-bar {
+    padding: 3vmin;
+    border:white;
+    background-color: #181818	;
+    border-radius: 3.5vmin;
+    margin-bottom: 5vmin;
+    color:white;
+	font-size: 2vmin;
+}
+
+.deviceicon {
+	font-size: 2vmin;
+	padding: 0;
 }

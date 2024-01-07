@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>redirecting...</title>
+        <style>
+            body {
+                background-color: black;
+            }
+        </style>
+	</head>
+    <body></body>
+    <script>
+        let link = "";
+		const id = new URLSearchParams(window.location.search).get('id');
+        if (id === "discord") {
+            link = "https://discord.gg/zhgVeJeKVR"
+        } else if (id === "twitter") {
+            link = "https://twitter.com/MaxxusYT2"
+        } else if (id === "twitteralt") {
+            link = "https://twitter.com/maxxusalt"
+        } else if (id === "github") {
+            link = "https://github.com/maxxusx"
+        } else if (id === "wrd") {
+            link = "https://forum.wearedevs.net/profile?uid=108982"
+        } else if (id === "v3rm") {
+            link = "https://v3rm.net/members/maxxus.1417/"
+        } else if (id === "youtube") {
+            link = "https://www.youtube.com/@MaxxusX"
+        }
+
+        if (link !== "") {
+            window.location.replace(link);
+        } else {
+            document.body.innerHTML = `<h1 id="thing" style="color: white;">error<br>id ${id} isnt valid</h1>`
+        }
+    </script>
+</html>

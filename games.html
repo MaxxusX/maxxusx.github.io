@@ -6,47 +6,81 @@
 		<title>maxxus // games</title>
 		<link rel="preload" href="assets/style.css" as="style">
 		<link rel="stylesheet" href="assets/style.css">
-		<link rel="icon" href="assets/favicon.png">
+		<link rel="icon" href="assets/favicon.webp">
 		<script src="game/games.js"></script> <!-- get games. go to games.js to add them. -->
 	</head>
 	<body>
 		<div id="centerbox">
-						<a style="font-size:20px;" rel="nofollow" href="index.html"><h3>home</h3></a>
-					<div id="games" class="box" style="margin: 0; margin-top: 10px; text-align: center;">
-						<h1 style="display:inline; font-size:4em;">GAMES</h1>
-						<br>
-						<br>
-					</div>
-			<br>
+			<input class="search-bar" type="text" id="searchInput" placeholder="search for a game">
+			<div id="games" class="box"></div>
 		</div>
-		<script>
-			data.sort(function (a, b) {
-				if (a.name < b.name) {
-					return -1;
-				}
-				if (a.name > b.name) {
-					return 1;
-				}
-				return 0;
-			});
-
-			const gamesdiv = document.getElementById("games")
-			data.forEach(game => {
-				gamesdiv.innerHTML += `<a style="font-size:20px;" rel="nofollow" href="game.html?game=${game.id}"><h3 class="navlink hoverthing hoverthingleft popoutthing">${game.name}</h3></a>
-				<br>
-				<b>${game.devices}</b>
-				<br>
-				<b>unblocked: ${game.unblocked}</b>
-				<br>
-				<p class="gamedesc">${game.description}</p>
-				<br><br>`
-			})
-		</script>
-		<footer class="bottom">
+		<footer><!-- class="relative" -->
+			<span>ui skidded from <a href="https://github.com/D3ch/hell" target="_blank" rel="noopener">hell</a></span>
+			<br>
+			<span>games are property of their respective owners</span>
+			<br>
 			<span id="splash"></span>
 			<script src="assets/splash.js"></script>
 			<br>
             <span>© 2023 Maxxus</span>
 		</footer>
 	</body>
+	<script>
+		data.sort(function (a, b) {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
+
+		function generateGameCards() {
+			const container = document.getElementById("games");
+
+			data.forEach((game) => {
+				const card = document.createElement("div");
+				card.className = "game-card";
+				card.innerHTML = `
+					<h1 class="game-title">${game.name}</h1>
+					<p class="game-desc">${game.description}</p>
+					<a href="game.html?game=${game.id}" class="play-button">play</a>
+				`;
+				container.appendChild(card);
+			});
+			
+		}
+
+		generateGameCards();
+
+		// working search!
+		document.getElementById("searchInput").addEventListener("input", function () {
+			const searchTerm = this.value.toLowerCase();
+			const cards = document.querySelectorAll(".game-card");
+
+			cards.forEach((card) => {
+				const title = card.querySelector(".game-title").textContent.toLowerCase();
+				if (title.includes(searchTerm)) {
+					card.style.display = "block";
+				} else {
+					card.style.display = "none";
+				}
+			});
+		});
+
+		/*
+		const gamesdiv = document.getElementById("games")
+		data.forEach(game => {
+			gamesdiv.innerHTML += `<a class="calibri" rel="nofollow" href="game.html?game=${game.id}"><h3 class="navlink hoverthing popoutthing">${game.name}</h3></a>
+			<br>
+			<b>${game.devices}</b>
+			<br>
+			<b>unblocked: ${game.unblocked}</b>
+			<br>
+			<p class="gamedesc">${game.description}</p>
+			<br><br>`
+		})
+		*/
+	</script>
 </html>

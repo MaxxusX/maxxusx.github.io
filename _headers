@@ -1,0 +1,21 @@
+/*
+  Access-Control-Allow-Origin: *
+  Referrer-Policy: no-referrer
+
+/old
+  X-Robots-Tag: noindex
+
+/terminal
+  X-Robots-Tag: noindex
+
+/redirect
+  X-Robots-Tag: noindex
+
+/push.bat
+  X-Robots-Tag: noindex
+
+/README.md
+  X-Robots-Tag: noindex
+
+/404
+  X-Robots-Tag: noindex

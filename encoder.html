@@ -3,19 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preload" href="assets/newstyle.css" as="style">
+		<link rel="preload" href="assets/style.css" as="style">
 		<script src="assets/universal.js"></script>
 		<title>maxxus // encoder</title>
-		<link rel="stylesheet" href="assets/newstyle.css">
-		<link rel="icon" href="assets/favicon.png">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="icon" href="assets/favicon.webp">
 	</head>
 	<body>
 		<span>
 			<form>
-				<label for="inputbox">input:</label>
-				<br>
+				<label for="inputbox"><h3>input:</h3></label>
 				<textarea spellcheck="true" type="text" id="inputbox" name="inputbox"></textarea><br>
-				<label style="color:#ececec;" for="outputbox">output:</label><br>
+				<label style="color:#ececec;" for="outputbox"><h3>output:</h3></label>
 				<textarea spellcheck="false" type="text" id="outputbox" name="outputbox"></textarea>
 			</form>
 
@@ -24,16 +23,16 @@
 
 			<script>
 				// make encoding/decoding functions and stuff
-				var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-				var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+				const uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+				const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 				function randomInt() {
 					return Math.floor(Math.random() * 25);
 				};
 				
 				function encodeToText(str) {
-					var output = '';
-					for (var i = 0; i < str.length; i++) {
+					let output = '';
+					for (let i = 0; i < str.length; i++) {
 						if (str[i] === "1") {
 							output += uppercase[randomInt()];
 						} else if (str[i] === "0") {
@@ -45,8 +44,8 @@
 					return output;
 				};
 				function decodeToBin(str) {
-					var output = '';
-					for (var i = 0; i < str.length; i++) {
+					let output = '';
+					for (let i = 0; i < str.length; i++) {
 						if (str[i] === " ") {
 							output += " ";
 						} else {
@@ -67,7 +66,7 @@
 					}).join(' ');
 				};
 				function decodeBin(str) {
-					var binString = '';
+					let binString = '';
 					str.split(' ').map(function(bin) {
 						binString += String.fromCharCode(parseInt(bin, 2));
 					});
@@ -83,14 +82,10 @@
 				};
 				// now actually encode/decode
 				function encodestuff() {
-					var inputbox = document.getElementById("inputbox");
-					var outputbox = document.getElementById("outputbox")
-					outputbox.value = encode(inputbox.value);
+					document.getElementById("outputbox").value = encode(document.getElementById("inputbox").value);
 				};
 				function decodestuff() {
-					var inputbox = document.getElementById("inputbox");
-					var outputbox = document.getElementById("outputbox")
-					outputbox.value = decode(inputbox.value);
+					document.getElementById("outputbox").value = decode(document.getElementById("inputbox").value);
 				};
 			</script>
 		</span>
